@@ -5,11 +5,43 @@
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
-	"usedAddons": [],
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		}
+	],
 	"uniqueId": "knbzl4imixx",
 	"objectTypes": {
-		"items": [],
-		"subfolders": []
+		"items": [
+			"Tilemap"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"spr_pl_sunflower",
+					"spr_hole",
+					"spr_item_shovel",
+					"spr_item_sunflower",
+					"spr_item_watercan",
+					"spr_item_seeds"
+				],
+				"subfolders": [],
+				"name": "Spr"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
