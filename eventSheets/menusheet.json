@@ -2,6 +2,46 @@
 	"name": "MenuSheet",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "Sound_Muted",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 759677268609758
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 853215468861733
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "spr_menu_sound",
+					"sid": 423829563877353,
+					"parameters": {
+						"frame-number": "0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 203398052825792,
+					"parameters": {
+						"variable": "Sound_Muted",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 516560138711291
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -32,7 +72,105 @@
 					}
 				}
 			],
-			"sid": 929738336726826
+			"sid": 929738336726826,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 514422572245630,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "spr_menu_sound"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 348738470504918,
+					"parameters": {
+						"variable": "Sound_Muted"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 950411546594606,
+					"parameters": {
+						"variable": "Sound_Muted",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "spr_menu_sound",
+					"sid": 111255170966379,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Sprite",
+					"sid": 146770163007139,
+					"disabled": true,
+					"parameters": {
+						"x": "Sprite.X+5",
+						"y": "Sprite.Y"
+					}
+				}
+			],
+			"sid": 906412305263168
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 885136698792760,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "spr_menu_sound"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 520801997996989,
+					"parameters": {
+						"variable": "Sound_Muted"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 905043109969564,
+					"parameters": {
+						"variable": "Sound_Muted",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "spr_menu_sound",
+					"sid": 235745720236233,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 767318571273542
 		}
 	],
 	"sid": 333103805956119

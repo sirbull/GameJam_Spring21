@@ -1,7 +1,7 @@
 {
-	"name": "spr_item_sunflower",
+	"name": "spr_item_water",
 	"plugin-id": "Sprite",
-	"sid": 929754960588249,
+	"sid": 147398632057364,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -18,7 +18,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2418059,
+						"imageSpriteId": 6344775,
 						"collisionPoly": {
 							"points": [
 								0.02857142857142857,
@@ -50,7 +50,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6871673,
+						"imageSpriteId": 2784952,
 						"collisionPoly": {
 							"points": [
 								0.02857142857142857,
@@ -82,7 +82,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5479527,
+						"imageSpriteId": 3419243,
 						"collisionPoly": {
 							"points": [
 								0.02857142857142857,
@@ -107,8 +107,8 @@
 						"duration": 1
 					}
 				],
-				"sid": 328349754284822,
-				"name": "ani_sunfl",
+				"sid": 540582198841255,
+				"name": "ani_water",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -125,7 +125,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 3617018,
+						"imageSpriteId": 5471068,
 						"collisionPoly": {
 							"points": [
 								0.02857142857142857,
@@ -157,7 +157,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1394341,
+						"imageSpriteId": 6644382,
 						"collisionPoly": {
 							"points": [
 								0.02857142857142857,
@@ -182,8 +182,8 @@
 						"duration": 1
 					}
 				],
-				"sid": 387668899553513,
-				"name": "ani_sunfl_no",
+				"sid": 891727123941281,
+				"name": "ani_water_no",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 3,

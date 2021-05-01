@@ -381,7 +381,7 @@
 					}
 				},
 				{
-					"type": "spr_item_watercan",
+					"type": "spr_item_water",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "ani_water",

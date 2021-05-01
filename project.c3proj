@@ -67,13 +67,14 @@
 			"spr_item_dirt",
 			"spr_item_shovel",
 			"spr_item_sunflower",
-			"spr_item_watercan",
+			"spr_item_water",
 			"spr_pl_sunflower",
 			"spr_cloud3",
 			"Mouse",
 			"spr_marker16",
 			"spr_Title_logo",
-			"Particles"
+			"Particles",
+			"Sprite"
 		],
 		"subfolders": []
 	},

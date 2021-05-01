@@ -413,6 +413,50 @@
 								}
 							],
 							"sid": 364118649006672
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 617839025243844,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "spr_item_water"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 591494973555772,
+									"parameters": {
+										"variable": "C1_shovel_able"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "spr_item_dirt",
+									"sid": 730258087591528,
+									"parameters": {
+										"animation": "\"ani_shovel_no\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 508802842599449,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								}
+							],
+							"sid": 756308560085765
 						}
 					],
 					"sid": 212327170431463
@@ -471,9 +515,14 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-any-click",
+									"id": "on-object-clicked",
 									"objectClass": "Mouse",
-									"sid": 934056526185052
+									"sid": 465812634547053,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "spr_item_dirt"
+									}
 								},
 								{
 									"id": "compare-boolean-eventvar",
@@ -487,6 +536,7 @@
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 418996890275621,
+									"disabled": true,
 									"parameters": {
 										"variable": "item_dirt_down"
 									}
@@ -568,14 +618,22 @@
 									"parameters": {
 										"mouse-button": "left",
 										"click-type": "clicked",
-										"object-clicked": "spr_item_watercan"
+										"object-clicked": "spr_item_water"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 855833303724284,
+									"parameters": {
+										"variable": "C1_water_able"
 									}
 								}
 							],
 							"actions": [
 								{
 									"id": "set-animation-frame",
-									"objectClass": "spr_item_watercan",
+									"objectClass": "spr_item_water",
 									"sid": 626192597399196,
 									"parameters": {
 										"frame-number": "1"
@@ -597,14 +655,28 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-any-click",
+									"id": "on-object-clicked",
 									"objectClass": "Mouse",
-									"sid": 864368618471534
+									"sid": 894458231768567,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "spr_item_water"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 938168176490622,
+									"parameters": {
+										"variable": "C1_water_able"
+									}
 								},
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 635157376179137,
+									"disabled": true,
 									"parameters": {
 										"variable": "item_water_down"
 									}
@@ -613,7 +685,7 @@
 							"actions": [
 								{
 									"id": "set-animation-frame",
-									"objectClass": "spr_item_watercan",
+									"objectClass": "spr_item_water",
 									"sid": 739675085016181,
 									"parameters": {
 										"frame-number": "0"
@@ -621,6 +693,50 @@
 								}
 							],
 							"sid": 664451982208449
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 271797705423233,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "spr_item_water"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 994491855164204,
+									"parameters": {
+										"variable": "C1_water_able"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "spr_item_dirt",
+									"sid": 254524741729405,
+									"parameters": {
+										"animation": "\"ani_water_no\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 228571566805595,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								}
+							],
+							"sid": 366704208558839
 						}
 					],
 					"sid": 364936308798930
@@ -643,6 +759,14 @@
 										"mouse-button": "left",
 										"click-type": "clicked",
 										"object-clicked": "spr_item_sunflower"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 952803000786309,
+									"parameters": {
+										"variable": "C1_sunflower_able"
 									}
 								}
 							],
@@ -671,16 +795,30 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-any-click",
+									"id": "on-object-clicked",
 									"objectClass": "Mouse",
-									"sid": 658198227553833
+									"sid": 403470690686153,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "spr_item_sunflower"
+									}
 								},
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 172592395766711,
+									"disabled": true,
 									"parameters": {
 										"variable": "item_sunflower_down"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 940640355679937,
+									"parameters": {
+										"variable": "C1_sunflower_able"
 									}
 								}
 							],
@@ -695,6 +833,50 @@
 								}
 							],
 							"sid": 278240507528435
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 227248179721344,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "spr_item_sunflower"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 910529428340681,
+									"parameters": {
+										"variable": "C1_sunflower_able"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "spr_item_dirt",
+									"sid": 630711725559759,
+									"parameters": {
+										"animation": "\"ani_sunfl_no\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 609647262548100,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								}
+							],
+							"sid": 239278381070847
 						}
 					],
 					"sid": 883885886636156
