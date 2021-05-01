@@ -43,6 +43,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "dirt_marked",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 571539231596095
+		},
+		{
+			"eventType": "variable",
 			"name": "sunfl_marked",
 			"type": "boolean",
 			"initialValue": "false",
@@ -703,6 +713,132 @@
 								}
 							],
 							"sid": 379698032881535
+						},
+						{
+							"eventType": "comment",
+							"text": "Plant Dirt"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 819012495949531,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "spr_marker16"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 692224221933738,
+									"parameters": {
+										"variable": "item_dirt_down"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 261776194776576,
+									"parameters": {
+										"variable": "C1_dirt_able"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "spr_marker16",
+									"sid": 506403829880917,
+									"parameters": {
+										"x": "-50",
+										"y": "-50"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Sprite2",
+									"sid": 915227321638660,
+									"parameters": {
+										"x": "72",
+										"y": "108"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 728070898867213,
+									"parameters": {
+										"variable": "dirt_marked",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 195757091575341,
+									"parameters": {
+										"variable": "C1_dirt_able",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 500117102716924,
+									"parameters": {
+										"variable": "C1_water_able",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 678386844444431
+						},
+						{
+							"eventType": "comment",
+							"text": "Mark Dirt"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 945923657559166,
+									"parameters": {
+										"variable": "item_dirt_down"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 502516436747723
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "spr_marker16",
+									"sid": 514196303530951,
+									"parameters": {
+										"x": "72",
+										"y": "109"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 178446841858444,
+									"parameters": {
+										"variable": "sunfl_marked",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 788070888360238
 						}
 					],
 					"sid": 514448770642065
@@ -973,6 +1109,10 @@
 							"sid": 239278381070847
 						},
 						{
+							"eventType": "comment",
+							"text": "Plant Sunflower"
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -992,6 +1132,14 @@
 									"parameters": {
 										"variable": "sunfl_marked"
 									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 102076175905429,
+									"parameters": {
+										"variable": "C1_sunflower_able"
+									}
 								}
 							],
 							"actions": [
@@ -1002,24 +1150,6 @@
 									"parameters": {
 										"x": "-50",
 										"y": "-50"
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 719411781506809,
-									"parameters": {
-										"variable": "shovel_marked",
-										"value": "false"
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 915527226685998,
-									"parameters": {
-										"variable": "C1_sunflower_able",
-										"value": "false"
 									}
 								},
 								{
@@ -1042,14 +1172,36 @@
 								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 724595606581575,
+									"sid": 206771706100362,
 									"parameters": {
 										"variable": "C1_sunflower_able",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 167586570757792,
+									"parameters": {
+										"variable": "sunfl_marked",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 908919888780285,
+									"parameters": {
+										"variable": "C1_dirt_able",
 										"value": "true"
 									}
 								}
 							],
 							"sid": 611653190350111
+						},
+						{
+							"eventType": "comment",
+							"text": "Mark Sunflower"
 						},
 						{
 							"eventType": "block",
