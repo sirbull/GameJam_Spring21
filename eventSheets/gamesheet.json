@@ -121,7 +121,7 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 653021622953678,
+							"sid": 393606352756362,
 							"parameters": {
 								"variable": "C1_shovel_able",
 								"value": "true"
@@ -130,7 +130,7 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 573998855811613,
+							"sid": 357055755528456,
 							"parameters": {
 								"variable": "C1_dirt_able",
 								"value": "false"
@@ -139,7 +139,7 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 471974198634155,
+							"sid": 196317529221221,
 							"parameters": {
 								"variable": "C1_water_able",
 								"value": "false"
@@ -148,7 +148,7 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 635562383702392,
+							"sid": 722887206732356,
 							"parameters": {
 								"variable": "C1_sunflower_able",
 								"value": "false"
@@ -180,11 +180,19 @@
 								{
 									"id": "on-object-clicked",
 									"objectClass": "Mouse",
-									"sid": 470869628624920,
+									"sid": 543843998139246,
 									"parameters": {
 										"mouse-button": "left",
 										"click-type": "clicked",
 										"object-clicked": "spr_item_shovel"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 334907946435026,
+									"parameters": {
+										"variable": "C1_shovel_able"
 									}
 								}
 							],
@@ -192,7 +200,7 @@
 								{
 									"id": "set-animation-frame",
 									"objectClass": "spr_item_shovel",
-									"sid": 644978064207623,
+									"sid": 965132057985351,
 									"parameters": {
 										"frame-number": "1"
 									}
@@ -200,14 +208,14 @@
 								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 510892619846784,
+									"sid": 130753397234828,
 									"parameters": {
 										"variable": "item_shovel_down",
 										"value": "true"
 									}
 								}
 							],
-							"sid": 835548057886145
+							"sid": 686798485660237
 						},
 						{
 							"eventType": "block",
@@ -215,12 +223,12 @@
 								{
 									"id": "on-any-click",
 									"objectClass": "Mouse",
-									"sid": 669765052836642
+									"sid": 365763010101392
 								},
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 648457373803229,
+									"sid": 752573712995616,
 									"parameters": {
 										"variable": "item_shovel_down"
 									}
@@ -230,13 +238,22 @@
 								{
 									"id": "set-animation-frame",
 									"objectClass": "spr_item_shovel",
-									"sid": 844359874184393,
+									"sid": 103303115401279,
 									"parameters": {
 										"frame-number": "0"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 623562457979484,
+									"parameters": {
+										"variable": "item_shovel_down",
+										"value": "false"
+									}
 								}
 							],
-							"sid": 177828099620117
+							"sid": 558964480263103
 						},
 						{
 							"eventType": "block",
@@ -244,7 +261,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 889324392524562,
+									"sid": 484256798078540,
 									"parameters": {
 										"variable": "item_shovel_down"
 									}
@@ -252,14 +269,14 @@
 								{
 									"id": "trigger-once-while-true",
 									"objectClass": "System",
-									"sid": 512960145149827
+									"sid": 223901152510722
 								}
 							],
 							"actions": [
 								{
 									"id": "set-position",
 									"objectClass": "spr_marker16",
-									"sid": 895354346634326,
+									"sid": 646582695847139,
 									"parameters": {
 										"x": "72",
 										"y": "109"
@@ -268,14 +285,54 @@
 								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 443548359201712,
+									"sid": 882377000254803,
 									"parameters": {
 										"variable": "shovel_marked",
 										"value": "true"
 									}
 								}
 							],
-							"sid": 945694162984241
+							"sid": 924704798752952
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 974261216831841,
+									"parameters": {
+										"variable": "item_shovel_down"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 137707907462578
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "spr_marker16",
+									"sid": 499143647940115,
+									"parameters": {
+										"x": "-50",
+										"y": "-50"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 803258238980695,
+									"parameters": {
+										"variable": "shovel_marked",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 817968093717858
 						},
 						{
 							"eventType": "block",
@@ -283,12 +340,12 @@
 								{
 									"id": "on-any-click",
 									"objectClass": "Mouse",
-									"sid": 743537972184808
+									"sid": 963953401888267
 								},
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 886458890318313,
+									"sid": 986922019259095,
 									"parameters": {
 										"variable": "item_shovel_down"
 									}
@@ -296,7 +353,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 107089403513896,
+									"sid": 246136924644471,
 									"parameters": {
 										"variable": "shovel_marked"
 									}
@@ -306,7 +363,7 @@
 								{
 									"id": "set-position",
 									"objectClass": "spr_marker16",
-									"sid": 513731853863546,
+									"sid": 430614008930587,
 									"parameters": {
 										"x": "-50",
 										"y": "-50"
@@ -315,7 +372,7 @@
 								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 775067765594854,
+									"sid": 992121422010597,
 									"parameters": {
 										"variable": "shovel_marked",
 										"value": "false"
@@ -324,14 +381,14 @@
 								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 211208161626367,
+									"sid": 294066377568562,
 									"parameters": {
 										"variable": "item_shovel_down",
 										"value": "false"
 									}
 								}
 							],
-							"sid": 677631436020193,
+							"sid": 314158102310244,
 							"disabled": true
 						},
 						{
@@ -340,7 +397,7 @@
 								{
 									"id": "on-object-clicked",
 									"objectClass": "Mouse",
-									"sid": 137936342471011,
+									"sid": 254533390573220,
 									"parameters": {
 										"mouse-button": "left",
 										"click-type": "clicked",
@@ -350,7 +407,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 302755820402716,
+									"sid": 275469799725883,
 									"parameters": {
 										"variable": "shovel_marked"
 									}
@@ -360,7 +417,7 @@
 								{
 									"id": "set-position",
 									"objectClass": "spr_marker16",
-									"sid": 836983739480197,
+									"sid": 233652373677648,
 									"parameters": {
 										"x": "-50",
 										"y": "-50"
@@ -369,7 +426,7 @@
 								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 511083109819821,
+									"sid": 950529082080358,
 									"parameters": {
 										"variable": "shovel_marked",
 										"value": "false"
@@ -378,7 +435,7 @@
 								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 619497897006999,
+									"sid": 833799105632363,
 									"parameters": {
 										"variable": "C1_shovel_able",
 										"value": "false"
@@ -387,7 +444,7 @@
 								{
 									"id": "set-position",
 									"objectClass": "spr_hole",
-									"sid": 792161835289328,
+									"sid": 958777571514695,
 									"parameters": {
 										"x": "72",
 										"y": "109"
@@ -396,7 +453,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "spr_hole",
-									"sid": 556053062250199,
+									"sid": 338319692694376,
 									"parameters": {
 										"animation": "\"hole\"",
 										"from": "beginning"
@@ -405,14 +462,14 @@
 								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 451534468478649,
+									"sid": 802916078272722,
 									"parameters": {
 										"variable": "C1_sunflower_able",
 										"value": "true"
 									}
 								}
 							],
-							"sid": 364118649006672
+							"sid": 788196196154663
 						},
 						{
 							"eventType": "block",
@@ -420,17 +477,17 @@
 								{
 									"id": "on-object-clicked",
 									"objectClass": "Mouse",
-									"sid": 617839025243844,
+									"sid": 818964338487149,
 									"parameters": {
 										"mouse-button": "left",
 										"click-type": "clicked",
-										"object-clicked": "spr_item_water"
+										"object-clicked": "spr_item_shovel"
 									}
 								},
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 591494973555772,
+									"sid": 728770785573817,
 									"parameters": {
 										"variable": "C1_shovel_able"
 									},
@@ -440,8 +497,8 @@
 							"actions": [
 								{
 									"id": "set-animation",
-									"objectClass": "spr_item_dirt",
-									"sid": 730258087591528,
+									"objectClass": "spr_item_shovel",
+									"sid": 952416676084130,
 									"parameters": {
 										"animation": "\"ani_shovel_no\"",
 										"from": "beginning"
@@ -450,16 +507,16 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 508802842599449,
+									"sid": 899148782401427,
 									"parameters": {
 										"seconds": "1.0"
 									}
 								}
 							],
-							"sid": 756308560085765
+							"sid": 122046360424854
 						}
 					],
-					"sid": 212327170431463
+					"sid": 852984009006338
 				},
 				{
 					"eventType": "group",
@@ -474,7 +531,7 @@
 								{
 									"id": "on-object-clicked",
 									"objectClass": "Mouse",
-									"sid": 920293710332788,
+									"sid": 681025774010495,
 									"parameters": {
 										"mouse-button": "left",
 										"click-type": "clicked",
@@ -484,7 +541,8 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 421048126059234,
+									"sid": 682790587849140,
+									"disabled": true,
 									"parameters": {
 										"variable": "C1_dirt_able"
 									}
@@ -494,7 +552,7 @@
 								{
 									"id": "set-animation-frame",
 									"objectClass": "spr_item_dirt",
-									"sid": 345821517911255,
+									"sid": 563337001017967,
 									"parameters": {
 										"frame-number": "1"
 									}
@@ -502,32 +560,27 @@
 								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 757124731645209,
+									"sid": 475746070954187,
 									"parameters": {
 										"variable": "item_dirt_down",
 										"value": "true"
 									}
 								}
 							],
-							"sid": 995486242001563
+							"sid": 220156099651734
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-object-clicked",
+									"id": "on-any-click",
 									"objectClass": "Mouse",
-									"sid": 465812634547053,
-									"parameters": {
-										"mouse-button": "left",
-										"click-type": "clicked",
-										"object-clicked": "spr_item_dirt"
-									}
+									"sid": 552884350468251
 								},
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 615330871031267,
+									"sid": 628002424760072,
 									"parameters": {
 										"variable": "C1_dirt_able"
 									}
@@ -535,8 +588,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 418996890275621,
-									"disabled": true,
+									"sid": 645206525446821,
 									"parameters": {
 										"variable": "item_dirt_down"
 									}
@@ -546,13 +598,13 @@
 								{
 									"id": "set-animation-frame",
 									"objectClass": "spr_item_dirt",
-									"sid": 893646206022636,
+									"sid": 727685677708892,
 									"parameters": {
 										"frame-number": "0"
 									}
 								}
 							],
-							"sid": 326271253948774
+							"sid": 550258749155179
 						},
 						{
 							"eventType": "block",
@@ -560,7 +612,7 @@
 								{
 									"id": "on-object-clicked",
 									"objectClass": "Mouse",
-									"sid": 314838567950433,
+									"sid": 840996783249713,
 									"parameters": {
 										"mouse-button": "left",
 										"click-type": "clicked",
@@ -570,7 +622,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 611049127742293,
+									"sid": 544469578357184,
 									"parameters": {
 										"variable": "C1_dirt_able"
 									},
@@ -581,7 +633,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "spr_item_dirt",
-									"sid": 705888060145158,
+									"sid": 431936087690325,
 									"parameters": {
 										"animation": "\"ani_dirt_no\"",
 										"from": "beginning"
@@ -590,16 +642,16 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 163293762106753,
+									"sid": 231316235462257,
 									"parameters": {
 										"seconds": "1.0"
 									}
 								}
 							],
-							"sid": 219442087293572
+							"sid": 379698032881535
 						}
 					],
-					"sid": 407627956166687
+					"sid": 514448770642065
 				},
 				{
 					"eventType": "group",
@@ -655,14 +707,9 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-object-clicked",
+									"id": "on-any-click",
 									"objectClass": "Mouse",
-									"sid": 894458231768567,
-									"parameters": {
-										"mouse-button": "left",
-										"click-type": "clicked",
-										"object-clicked": "spr_item_water"
-									}
+									"sid": 311684857466724
 								},
 								{
 									"id": "compare-boolean-eventvar",
@@ -676,7 +723,6 @@
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 635157376179137,
-									"disabled": true,
 									"parameters": {
 										"variable": "item_water_down"
 									}
@@ -686,7 +732,7 @@
 								{
 									"id": "set-animation-frame",
 									"objectClass": "spr_item_water",
-									"sid": 739675085016181,
+									"sid": 492699559440818,
 									"parameters": {
 										"frame-number": "0"
 									}
@@ -720,8 +766,8 @@
 							"actions": [
 								{
 									"id": "set-animation",
-									"objectClass": "spr_item_dirt",
-									"sid": 254524741729405,
+									"objectClass": "spr_item_water",
+									"sid": 102589476464195,
 									"parameters": {
 										"animation": "\"ani_water_no\"",
 										"from": "beginning"
@@ -795,20 +841,14 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-object-clicked",
+									"id": "on-any-click",
 									"objectClass": "Mouse",
-									"sid": 403470690686153,
-									"parameters": {
-										"mouse-button": "left",
-										"click-type": "clicked",
-										"object-clicked": "spr_item_sunflower"
-									}
+									"sid": 725220597793164
 								},
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 172592395766711,
-									"disabled": true,
+									"sid": 740501122189919,
 									"parameters": {
 										"variable": "item_sunflower_down"
 									}
@@ -816,7 +856,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 940640355679937,
+									"sid": 429532867326561,
 									"parameters": {
 										"variable": "C1_sunflower_able"
 									}
@@ -826,7 +866,7 @@
 								{
 									"id": "set-animation-frame",
 									"objectClass": "spr_item_sunflower",
-									"sid": 654249020647200,
+									"sid": 922087621336709,
 									"parameters": {
 										"frame-number": "0"
 									}
@@ -860,8 +900,8 @@
 							"actions": [
 								{
 									"id": "set-animation",
-									"objectClass": "spr_item_dirt",
-									"sid": 630711725559759,
+									"objectClass": "spr_item_sunflower",
+									"sid": 883057781317518,
 									"parameters": {
 										"animation": "\"ani_sunfl_no\"",
 										"from": "beginning"
