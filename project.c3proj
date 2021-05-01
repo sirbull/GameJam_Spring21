@@ -31,6 +31,22 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Sin",
 			"name": "Sine",
@@ -55,7 +71,9 @@
 			"spr_pl_sunflower",
 			"spr_cloud3",
 			"Mouse",
-			"spr_marker16"
+			"spr_marker16",
+			"spr_Title_logo",
+			"Particles"
 		],
 		"subfolders": []
 	},

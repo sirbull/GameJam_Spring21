@@ -401,6 +401,15 @@
 										"animation": "\"hole\"",
 										"from": "beginning"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 451534468478649,
+									"parameters": {
+										"variable": "C1_sunflower_able",
+										"value": "true"
+									}
 								}
 							],
 							"sid": 364118649006672

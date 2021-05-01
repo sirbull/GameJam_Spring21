@@ -1,27 +1,26 @@
 {
-	"name": "Game_Tilemap",
-	"plugin-id": "Tilemap",
-	"sid": 440041226317746,
+	"name": "Particles",
+	"plugin-id": "Particles",
+	"sid": 534872551468546,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 518758287861734
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 510956027318414
 		}
 	],
 	"effectTypes": [],
 	"image": {
-		"width": 128,
-		"height": 128,
+		"width": 8,
+		"height": 8,
 		"originX": 0.5,
 		"originY": 0.5,
 		"originalSource": "",
 		"exportFormat": "png",
 		"exportQuality": 0.8,
-		"imageSpriteId": 726667,
+		"imageSpriteId": 3798790,
 		"useCollisionPoly": true
-	},
-	"tile-collision-polys": {}
+	}
 }

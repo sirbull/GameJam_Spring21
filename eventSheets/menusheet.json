@@ -1,5 +1,39 @@
 {
 	"name": "MenuSheet",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 387230228723460,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "pick-by-unique-id",
+					"objectClass": "Game_Tilemap",
+					"sid": 426511281804485,
+					"parameters": {
+						"unique-id": "9"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 436865275978988,
+					"parameters": {
+						"layout": "Game"
+					}
+				}
+			],
+			"sid": 929738336726826
+		}
+	],
 	"sid": 333103805956119
 }
