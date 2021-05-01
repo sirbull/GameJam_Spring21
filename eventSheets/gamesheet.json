@@ -43,6 +43,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "C2_shovel_able",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 750341309353372
+		},
+		{
+			"eventType": "variable",
 			"name": "dirt_marked",
 			"type": "boolean",
 			"initialValue": "true",
@@ -60,6 +70,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 764101186898449
+		},
+		{
+			"eventType": "variable",
+			"name": "water_marked",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 711545338895769
 		},
 		{
 			"eventType": "variable",
@@ -402,63 +422,6 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-any-click",
-									"objectClass": "Mouse",
-									"sid": 963953401888267
-								},
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 986922019259095,
-									"parameters": {
-										"variable": "item_shovel_down"
-									}
-								},
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 246136924644471,
-									"parameters": {
-										"variable": "shovel_marked"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-position",
-									"objectClass": "spr_marker16",
-									"sid": 430614008930587,
-									"parameters": {
-										"x": "-50",
-										"y": "-50"
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 992121422010597,
-									"parameters": {
-										"variable": "shovel_marked",
-										"value": "false"
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 294066377568562,
-									"parameters": {
-										"variable": "item_shovel_down",
-										"value": "false"
-									}
-								}
-							],
-							"sid": 314158102310244,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "on-object-clicked",
 									"objectClass": "Mouse",
 									"sid": 254533390573220,
@@ -760,7 +723,7 @@
 								},
 								{
 									"id": "set-position",
-									"objectClass": "Sprite2",
+									"objectClass": "spr_dirt",
 									"sid": 915227321638660,
 									"parameters": {
 										"x": "72",
@@ -839,6 +802,46 @@
 								}
 							],
 							"sid": 788070888360238
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 266232981403197,
+									"parameters": {
+										"variable": "item_dirt_down"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 384674805211183
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "spr_marker16",
+									"sid": 676927811515175,
+									"parameters": {
+										"x": "-50",
+										"y": "-50"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 471191502878213,
+									"parameters": {
+										"variable": "dirt_marked",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 899674849852069
 						}
 					],
 					"sid": 514448770642065
@@ -973,6 +976,172 @@
 								}
 							],
 							"sid": 366704208558839
+						},
+						{
+							"eventType": "comment",
+							"text": "Mark water"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 278450281611093,
+									"parameters": {
+										"variable": "item_water_down"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 253883414319916
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "spr_marker16",
+									"sid": 911784952656675,
+									"parameters": {
+										"x": "72",
+										"y": "109"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 241302317194750,
+									"parameters": {
+										"variable": "water_marked",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 841044371461395
+						},
+						{
+							"eventType": "comment",
+							"text": "Place wet dirt"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 363832046131860,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "spr_marker16"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 558279779564921,
+									"parameters": {
+										"variable": "water_marked"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 961343563663905,
+									"parameters": {
+										"variable": "C1_sunflower_able"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "spr_marker16",
+									"sid": 101286825985673,
+									"parameters": {
+										"x": "-50",
+										"y": "-50"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "spr_dirt_wet",
+									"sid": 536921135786756,
+									"parameters": {
+										"x": "72",
+										"y": "108"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 137771321033378,
+									"parameters": {
+										"variable": "water_marked",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 584496398255247,
+									"parameters": {
+										"variable": "C1_water_able",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 200271024149414,
+									"parameters": {
+										"variable": "water_marked",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 315843305979813
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 601398681381938,
+									"parameters": {
+										"variable": "item_water_down"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 592116161701719
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "spr_marker16",
+									"sid": 665472327262766,
+									"parameters": {
+										"x": "-50",
+										"y": "-50"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 613980482622672,
+									"parameters": {
+										"variable": "water_marked",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 462304590901294
 						}
 					],
 					"sid": 364936308798930
@@ -1185,6 +1354,15 @@
 									"parameters": {
 										"variable": "sunfl_marked",
 										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 265687954793582,
+									"parameters": {
+										"variable": "water_marked",
+										"value": "true"
 									}
 								},
 								{

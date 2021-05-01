@@ -104,7 +104,8 @@
 			"spr_fade",
 			"Sprite",
 			"spr_menu_sunflower",
-			"Sprite2"
+			"spr_dirt",
+			"spr_dirt_wet"
 		],
 		"subfolders": []
 	},

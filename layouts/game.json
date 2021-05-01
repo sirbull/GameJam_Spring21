@@ -265,20 +265,20 @@
 					}
 				},
 				{
-					"type": "spr_marker16",
+					"type": "spr_dirt",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "marker16",
+						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 19,
+					"uid": 11,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": -48.20982476107988,
-						"y": -0.4054475451559796,
+						"x": -9.65239884350433,
+						"y": 94.07857065576789,
 						"width": 16,
 						"height": 16,
 						"originX": 0.5,
@@ -294,7 +294,7 @@
 					}
 				},
 				{
-					"type": "Sprite2",
+					"type": "spr_dirt_wet",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -302,12 +302,41 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 11,
+					"uid": 27,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": -9.65239884350433,
-						"y": 94.07857065576789,
+						"x": -15.800415524997817,
+						"y": 74.53238721838774,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_marker16",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "marker16",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 19,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -48.20982476107988,
+						"y": -0.4054475451559796,
 						"width": 16,
 						"height": 16,
 						"originX": 0.5,
