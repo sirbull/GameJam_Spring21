@@ -1,0 +1,89 @@
+{
+	"name": "spr_marker16",
+	"plugin-id": "Sprite",
+	"sid": 201996336986729,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7927246,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0.9375,
+								0.9375,
+								0,
+								0,
+								0.5,
+								0.9375,
+								0.9375,
+								0.5,
+								0.9375,
+								0,
+								0.9375,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2090765,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.9375,
+								0,
+								0.9375,
+								0.5,
+								0.9375,
+								0.9375,
+								0.5,
+								0,
+								0,
+								0.9375,
+								0.9375,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 896212299561707,
+				"name": "marker16",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 2
+			}
+		],
+		"subfolders": []
+	}
+}

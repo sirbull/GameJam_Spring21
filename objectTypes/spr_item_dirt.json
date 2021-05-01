@@ -1,7 +1,7 @@
 {
-	"name": "spr_item_watercan",
+	"name": "spr_item_dirt",
 	"plugin-id": "Sprite",
-	"sid": 147398632057364,
+	"sid": 330992994013546,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -18,7 +18,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6344775,
+						"imageSpriteId": 6430750,
 						"collisionPoly": {
 							"points": [
 								0.02857142857142857,
@@ -50,7 +50,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2784952,
+						"imageSpriteId": 8147456,
 						"collisionPoly": {
 							"points": [
 								0.02857142857142857,
@@ -82,7 +82,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 3419243,
+						"imageSpriteId": 1553116,
 						"collisionPoly": {
 							"points": [
 								0.02857142857142857,
@@ -107,8 +107,8 @@
 						"duration": 1
 					}
 				],
-				"sid": 540582198841255,
-				"name": "ani_water",
+				"sid": 971095347953952,
+				"name": "ani_dirt",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -125,7 +125,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5471068,
+						"imageSpriteId": 3994681,
 						"collisionPoly": {
 							"points": [
 								0.02857142857142857,
@@ -157,7 +157,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6644382,
+						"imageSpriteId": 3528084,
 						"collisionPoly": {
 							"points": [
 								0.02857142857142857,
@@ -182,13 +182,13 @@
 						"duration": 1
 					}
 				],
-				"sid": 891727123941281,
-				"name": "ani_water_no",
-				"isLooping": true,
+				"sid": 331426639015935,
+				"name": "ani_dirt_no",
+				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 3,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 8
 			}
 		],
 		"subfolders": []

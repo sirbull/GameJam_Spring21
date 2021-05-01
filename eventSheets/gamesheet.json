@@ -1,0 +1,698 @@
+{
+	"name": "GameSheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "C1_shovel_able",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 228847673864101
+		},
+		{
+			"eventType": "variable",
+			"name": "C1_dirt_able",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 741184542304243
+		},
+		{
+			"eventType": "variable",
+			"name": "C1_water_able",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 370514370247004
+		},
+		{
+			"eventType": "variable",
+			"name": "C1_sunflower_able",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 202686157898823
+		},
+		{
+			"eventType": "variable",
+			"name": "item_shovel_down",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 516914714396914
+		},
+		{
+			"eventType": "variable",
+			"name": "item_dirt_down",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 423561536428012
+		},
+		{
+			"eventType": "variable",
+			"name": "item_sunflower_down",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 858316797829092
+		},
+		{
+			"eventType": "variable",
+			"name": "shovel_marked",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 577343856414412
+		},
+		{
+			"eventType": "variable",
+			"name": "item_water_down",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 967865539556587
+		},
+		{
+			"eventType": "variable",
+			"name": "Player_Currency",
+			"type": "number",
+			"initialValue": "100",
+			"comment": "The currency the player got",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 864871331960264
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Init",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 298036793588703
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 653021622953678,
+							"parameters": {
+								"variable": "C1_shovel_able",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 573998855811613,
+							"parameters": {
+								"variable": "C1_dirt_able",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 471974198634155,
+							"parameters": {
+								"variable": "C1_water_able",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 635562383702392,
+							"parameters": {
+								"variable": "C1_sunflower_able",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 630290393066745
+				}
+			],
+			"sid": 224596823786474
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "UI_buttons",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Shovel",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 470869628624920,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "spr_item_shovel"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_item_shovel",
+									"sid": 644978064207623,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 510892619846784,
+									"parameters": {
+										"variable": "item_shovel_down",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 835548057886145
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-any-click",
+									"objectClass": "Mouse",
+									"sid": 669765052836642
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 648457373803229,
+									"parameters": {
+										"variable": "item_shovel_down"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_item_shovel",
+									"sid": 844359874184393,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 177828099620117
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 889324392524562,
+									"parameters": {
+										"variable": "item_shovel_down"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 512960145149827
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "spr_marker16",
+									"sid": 895354346634326,
+									"parameters": {
+										"x": "72",
+										"y": "109"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 443548359201712,
+									"parameters": {
+										"variable": "shovel_marked",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 945694162984241
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-any-click",
+									"objectClass": "Mouse",
+									"sid": 743537972184808
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 886458890318313,
+									"parameters": {
+										"variable": "item_shovel_down"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 107089403513896,
+									"parameters": {
+										"variable": "shovel_marked"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "spr_marker16",
+									"sid": 513731853863546,
+									"parameters": {
+										"x": "-50",
+										"y": "-50"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 775067765594854,
+									"parameters": {
+										"variable": "shovel_marked",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 211208161626367,
+									"parameters": {
+										"variable": "item_shovel_down",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 677631436020193,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 137936342471011,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "spr_marker16"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 302755820402716,
+									"parameters": {
+										"variable": "shovel_marked"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "spr_marker16",
+									"sid": 836983739480197,
+									"parameters": {
+										"x": "-50",
+										"y": "-50"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 511083109819821,
+									"parameters": {
+										"variable": "shovel_marked",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 619497897006999,
+									"parameters": {
+										"variable": "C1_shovel_able",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "spr_hole",
+									"sid": 792161835289328,
+									"parameters": {
+										"x": "72",
+										"y": "109"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_hole",
+									"sid": 556053062250199,
+									"parameters": {
+										"animation": "\"hole\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 364118649006672
+						}
+					],
+					"sid": 212327170431463
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Dirt",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 920293710332788,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "spr_item_dirt"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 421048126059234,
+									"parameters": {
+										"variable": "C1_dirt_able"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_item_dirt",
+									"sid": 345821517911255,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 757124731645209,
+									"parameters": {
+										"variable": "item_dirt_down",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 995486242001563
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-any-click",
+									"objectClass": "Mouse",
+									"sid": 934056526185052
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 615330871031267,
+									"parameters": {
+										"variable": "C1_dirt_able"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 418996890275621,
+									"parameters": {
+										"variable": "item_dirt_down"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_item_dirt",
+									"sid": 893646206022636,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 326271253948774
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 314838567950433,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "spr_item_dirt"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 611049127742293,
+									"parameters": {
+										"variable": "C1_dirt_able"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "spr_item_dirt",
+									"sid": 705888060145158,
+									"parameters": {
+										"animation": "\"ani_dirt_no\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 163293762106753,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								}
+							],
+							"sid": 219442087293572
+						}
+					],
+					"sid": 407627956166687
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Water",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 635329065547366,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "spr_item_watercan"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_item_watercan",
+									"sid": 626192597399196,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 940840806531641,
+									"parameters": {
+										"variable": "item_water_down",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 817176964052221
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-any-click",
+									"objectClass": "Mouse",
+									"sid": 864368618471534
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 635157376179137,
+									"parameters": {
+										"variable": "item_water_down"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_item_watercan",
+									"sid": 739675085016181,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 664451982208449
+						}
+					],
+					"sid": 364936308798930
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Sunflower",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 851566148132144,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "spr_item_sunflower"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_item_sunflower",
+									"sid": 773081697407881,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 986621358165254,
+									"parameters": {
+										"variable": "item_sunflower_down",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 776191523470246
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-any-click",
+									"objectClass": "Mouse",
+									"sid": 658198227553833
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 172592395766711,
+									"parameters": {
+										"variable": "item_sunflower_down"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_item_sunflower",
+									"sid": 654249020647200,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 278240507528435
+						}
+					],
+					"sid": 883885886636156
+				}
+			],
+			"sid": 714232405282540
+		}
+	],
+	"sid": 381076121808650
+}

@@ -8,6 +8,14 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -16,8 +24,16 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Tilemap",
-			"name": "Tilemap",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
 			"author": "Scirra",
 			"version": "r241",
 			"bundled": false
@@ -26,24 +42,22 @@
 	"uniqueId": "knbzl4imixx",
 	"objectTypes": {
 		"items": [
-			"Tilemap",
-			"Sprite",
-			"Sprite2"
+			"Game_Tilemap",
+			"spr_menu_start",
+			"spr_menu_sound",
+			"spr_Background",
+			"spr_cloud1",
+			"spr_hole",
+			"spr_item_dirt",
+			"spr_item_shovel",
+			"spr_item_sunflower",
+			"spr_item_watercan",
+			"spr_pl_sunflower",
+			"spr_cloud3",
+			"Mouse",
+			"spr_marker16"
 		],
-		"subfolders": [
-			{
-				"items": [
-					"spr_pl_sunflower",
-					"spr_hole",
-					"spr_item_shovel",
-					"spr_item_sunflower",
-					"spr_item_watercan",
-					"spr_item_seeds"
-				],
-				"subfolders": [],
-				"name": "Spr"
-			}
-		]
+		"subfolders": []
 	},
 	"autosaveData": null,
 	"containers": [],
@@ -53,15 +67,15 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1",
-			"Layout 2"
+			"Game",
+			"Menu"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1",
-			"Event sheet 2"
+			"GameSheet",
+			"MenuSheet"
 		],
 		"subfolders": []
 	},

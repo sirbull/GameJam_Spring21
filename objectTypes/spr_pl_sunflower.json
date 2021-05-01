@@ -229,7 +229,7 @@
 				],
 				"sid": 288471112288373,
 				"name": "Animation 1",
-				"isLooping": false,
+				"isLooping": true,
 				"isPingPong": true,
 				"repeatCount": 1,
 				"repeatTo": 0,
