@@ -228,12 +228,12 @@
 					}
 				],
 				"sid": 288471112288373,
-				"name": "Animation 1",
-				"isLooping": true,
-				"isPingPong": true,
+				"name": "ani_sunfl",
+				"isLooping": false,
+				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 2
+				"speed": 0
 			}
 		],
 		"subfolders": []

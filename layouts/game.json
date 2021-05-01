@@ -239,7 +239,7 @@
 					"type": "spr_pl_sunflower",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "ani_sunfl",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -248,8 +248,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": -72.24587285955747,
-						"y": -6.071043909771717,
+						"x": -40.933709363409534,
+						"y": 76.99761800071377,
 						"width": 16,
 						"height": 64,
 						"originX": 0.5,

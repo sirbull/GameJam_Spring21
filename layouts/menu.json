@@ -9,7 +9,7 @@
 					"type": "spr_pl_sunflower",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "ani_sunfl",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -295,145 +295,6 @@
 			"overriden": 0,
 			"instances": [
 				{
-					"type": "Game_Tilemap",
-					"properties": {
-						"initially-visible": true,
-						"tile-width": 16,
-						"tile-height": 16,
-						"tile-x-offset": 0,
-						"tile-y-offset": 0,
-						"tile-x-spacing": 0,
-						"tile-y-spacing": 0,
-						"tile-x-drawing-offset": 0,
-						"tile-y-drawing-offset": 0,
-						"drawing-mode": "top-to-right"
-					},
-					"uid": 9,
-					"instanceVariables": {},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						}
-					},
-					"ownData": {
-						"tilemapData": {
-							"width": 5,
-							"height": 2,
-							"max-width": 44,
-							"max-height": 24,
-							"data": "1,57,22x0,2,58,22x0,2,58,22x0,2,58,22x0,3,59,317x0,16,640x0"
-						},
-						"tile-width": 16,
-						"tile-height": 16,
-						"tile-x-offset": 0,
-						"tile-y-offset": 0,
-						"tile-x-spacing": 0,
-						"tile-y-spacing": 0
-					},
-					"world": {
-						"x": 16,
-						"y": 16,
-						"width": 81.1265364223627,
-						"height": 32.62632048541991,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Game_Tilemap",
-					"properties": {
-						"initially-visible": true,
-						"tile-width": 16,
-						"tile-height": 16,
-						"tile-x-offset": 0,
-						"tile-y-offset": 0,
-						"tile-x-spacing": 0,
-						"tile-y-spacing": 0,
-						"tile-x-drawing-offset": 0,
-						"tile-y-drawing-offset": 0,
-						"drawing-mode": "top-to-right"
-					},
-					"uid": 10,
-					"instanceVariables": {},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						}
-					},
-					"ownData": {
-						"tilemapData": {
-							"width": 5,
-							"height": 2,
-							"max-width": 44,
-							"max-height": 24,
-							"data": "1,57,22x0,2,58,22x0,2,58,22x0,2,58,22x0,3,59,317x0,16,640x0"
-						},
-						"tile-width": 16,
-						"tile-height": 16,
-						"tile-x-offset": 0,
-						"tile-y-offset": 0,
-						"tile-x-spacing": 0,
-						"tile-y-spacing": 0
-					},
-					"world": {
-						"x": 16,
-						"y": 52.634630075787,
-						"width": 81.1265364223627,
-						"height": 32.62632048541991,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "spr_menu_start",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 13,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 54.86084169333543,
-						"y": 31.177238453791638,
-						"width": 48,
-						"height": 16,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "spr_Title_logo",
 					"properties": {
 						"initially-visible": true,
@@ -504,8 +365,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 22.782906725325034,
-						"y": 114.18376543541814,
+						"x": 27.782906725325034,
+						"y": 115.18376543541814,
 						"width": 16,
 						"height": 16,
 						"originX": 0.5,
@@ -521,7 +382,7 @@
 					}
 				},
 				{
-					"type": "Sprite",
+					"type": "spr_menu_start",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -529,21 +390,59 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 23,
+					"uid": 10,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 124.90523457397364,
-						"y": 95.64018595406876,
-						"width": 17.76030829339578,
-						"height": 17.76030829339578,
+						"x": 53.585947297985356,
+						"y": 54.54721534412362,
+						"width": 64,
+						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
 							1,
 							1,
 							1,
-							0.5
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SpriteFont",
+					"properties": {
+						"text": "CREATED BY HALLWAR & SIRBULL MUSIC BY SNIKENDE ULLTEPPE",
+						"enable-bbcode": true,
+						"character-width": 7,
+						"character-height": 9,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 13,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 45.34059001489746,
+						"y": 106.20544062449986,
+						"width": 200,
+						"height": 19.478951050037978,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
 						],
 						"angle": 0,
 						"zElevation": 0

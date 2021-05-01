@@ -43,6 +43,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "sunfl_marked",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 764101186898449
+		},
+		{
+			"eventType": "variable",
 			"name": "item_shovel_down",
 			"type": "boolean",
 			"initialValue": "false",
@@ -152,6 +162,25 @@
 							"parameters": {
 								"variable": "C1_sunflower_able",
 								"value": "false"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 101724795795042,
+							"parameters": {
+								"seconds": "0.5"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 690702413444956,
+							"parameters": {
+								"audio-file": "RabbitTown",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -917,6 +946,124 @@
 								}
 							],
 							"sid": 239278381070847
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 510726020822710,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "spr_marker16"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 421745871978441,
+									"parameters": {
+										"variable": "sunfl_marked"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "spr_marker16",
+									"sid": 388462001197706,
+									"parameters": {
+										"x": "-50",
+										"y": "-50"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 719411781506809,
+									"parameters": {
+										"variable": "shovel_marked",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 915527226685998,
+									"parameters": {
+										"variable": "C1_sunflower_able",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "spr_pl_sunflower",
+									"sid": 116029498241781,
+									"parameters": {
+										"x": "72",
+										"y": "85"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_pl_sunflower",
+									"sid": 259209748048186,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 724595606581575,
+									"parameters": {
+										"variable": "C1_sunflower_able",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 611653190350111
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 420938744089359,
+									"parameters": {
+										"variable": "item_sunflower_down"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 607277612335136
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "spr_marker16",
+									"sid": 540964041078508,
+									"parameters": {
+										"x": "72",
+										"y": "109"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 445932618234156,
+									"parameters": {
+										"variable": "sunfl_marked",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 673410339963021
 						}
 					],
 					"sid": 883885886636156

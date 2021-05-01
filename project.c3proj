@@ -39,6 +39,22 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Sprite font",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -59,7 +75,6 @@
 	"objectTypes": {
 		"items": [
 			"Game_Tilemap",
-			"spr_menu_start",
 			"spr_menu_sound",
 			"spr_Background",
 			"spr_cloud1",
@@ -74,7 +89,10 @@
 			"spr_marker16",
 			"spr_Title_logo",
 			"Particles",
-			"Sprite"
+			"Audio",
+			"spr_menu_start",
+			"spr_menu_credits",
+			"SpriteFont"
 		],
 		"subfolders": []
 	},
@@ -104,11 +122,28 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "sfx_PowerUp.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 743096765348004
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "PrincessQuest.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 782995409401840
+				},
+				{
+					"name": "RabbitTown.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 754914670784471
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
