@@ -277,37 +277,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": -9.65239884350433,
-						"y": 94.07857065576789,
-						"width": 16,
-						"height": 16,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "spr_dirt_wet",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 27,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": -15.800415524997817,
-						"y": 74.53238721838774,
+						"x": -31.073155522101416,
+						"y": 64.63114585969461,
 						"width": 16,
 						"height": 16,
 						"originX": 0.5,
@@ -339,6 +310,79 @@
 						"y": -0.4054475451559796,
 						"width": 16,
 						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_dirt_wet",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 27,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -28.46779770356332,
+						"y": 36.7246757624115,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_small_icons",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 28,
+					"instanceVariables": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 5,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 2,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 80.00894707308558,
+						"y": 111.91876151837177,
+						"width": 8,
+						"height": 8,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

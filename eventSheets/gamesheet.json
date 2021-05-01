@@ -228,13 +228,33 @@
 							}
 						},
 						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 440269337631035,
+							"parameters": {
+								"object-to-create": "spr_small_icons",
+								"layer": "\"UI\"",
+								"x": "85",
+								"y": "110",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "spr_small_icons",
+							"sid": 471734621903669,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 161068048692271,
+							"sid": 523341434580038,
 							"parameters": {
 								"audio-file": "RabbitTown",
-								"loop": "not-looping",
-								"volume": "-10",
+								"loop": "looping",
+								"volume": "-50",
 								"tag-optional": "\"\""
 							}
 						}
@@ -296,6 +316,14 @@
 									"parameters": {
 										"variable": "item_shovel_down",
 										"value": "true"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_small_icons",
+									"sid": 359707253035180,
+									"parameters": {
+										"frame-number": "0"
 									}
 								}
 							],
@@ -377,6 +405,10 @@
 								}
 							],
 							"sid": 924704798752952
+						},
+						{
+							"eventType": "comment",
+							"text": "Unmark Shovel"
 						},
 						{
 							"eventType": "block",
@@ -592,6 +624,14 @@
 										"variable": "item_dirt_down",
 										"value": "true"
 									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_small_icons",
+									"sid": 637798486555779,
+									"parameters": {
+										"frame-number": "0"
+									}
 								}
 							],
 							"sid": 220156099651734
@@ -731,6 +771,14 @@
 									}
 								},
 								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_small_icons",
+									"sid": 103118795601567,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 728070898867213,
@@ -802,6 +850,10 @@
 								}
 							],
 							"sid": 788070888360238
+						},
+						{
+							"eventType": "comment",
+							"text": "Unmark Dirt"
 						},
 						{
 							"eventType": "block",
@@ -891,6 +943,14 @@
 									"parameters": {
 										"variable": "item_water_down",
 										"value": "true"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_small_icons",
+									"sid": 762048105426075,
+									"parameters": {
+										"frame-number": "0"
 									}
 								}
 							],
@@ -1048,9 +1108,9 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 961343563663905,
+									"sid": 530001705519625,
 									"parameters": {
-										"variable": "C1_sunflower_able"
+										"variable": "C1_water_able"
 									}
 								}
 							],
@@ -1067,19 +1127,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "spr_dirt_wet",
-									"sid": 536921135786756,
+									"sid": 247376300470156,
 									"parameters": {
 										"x": "72",
 										"y": "108"
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 137771321033378,
-									"parameters": {
-										"variable": "water_marked",
-										"value": "true"
 									}
 								},
 								{
@@ -1102,6 +1153,10 @@
 								}
 							],
 							"sid": 315843305979813
+						},
+						{
+							"eventType": "comment",
+							"text": "Unmark Water"
 						},
 						{
 							"eventType": "block",
@@ -1134,7 +1189,7 @@
 								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 613980482622672,
+									"sid": 134666940025812,
 									"parameters": {
 										"variable": "water_marked",
 										"value": "false"
@@ -1191,6 +1246,14 @@
 									"parameters": {
 										"variable": "item_sunflower_down",
 										"value": "true"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_small_icons",
+									"sid": 625932202091282,
+									"parameters": {
+										"frame-number": "0"
 									}
 								}
 							],
@@ -1322,6 +1385,15 @@
 									}
 								},
 								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 235694686847334,
+									"parameters": {
+										"variable": "sunfl_marked",
+										"value": "false"
+									}
+								},
+								{
 									"id": "set-position",
 									"objectClass": "spr_pl_sunflower",
 									"sid": 116029498241781,
@@ -1344,15 +1416,6 @@
 									"sid": 206771706100362,
 									"parameters": {
 										"variable": "C1_sunflower_able",
-										"value": "false"
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 167586570757792,
-									"parameters": {
-										"variable": "sunfl_marked",
 										"value": "false"
 									}
 								},
@@ -1419,6 +1482,50 @@
 								}
 							],
 							"sid": 673410339963021
+						},
+						{
+							"eventType": "comment",
+							"text": "Unmark Sunflower"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 875698356201193,
+									"parameters": {
+										"variable": "item_sunflower_down"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 312819901871952
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "spr_marker16",
+									"sid": 361266873612677,
+									"parameters": {
+										"x": "-50",
+										"y": "-50"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 274087496940454,
+									"parameters": {
+										"variable": "sunfl_marked",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 537035853311641
 						}
 					],
 					"sid": 883885886636156

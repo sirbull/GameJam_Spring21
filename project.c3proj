@@ -102,10 +102,11 @@
 			"spr_menu_credits",
 			"SpriteFont",
 			"spr_fade",
-			"Sprite",
+			"spr_title_leaf",
 			"spr_menu_sunflower",
 			"spr_dirt",
-			"spr_dirt_wet"
+			"spr_dirt_wet",
+			"spr_small_icons"
 		],
 		"subfolders": []
 	},
