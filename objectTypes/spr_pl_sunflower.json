@@ -230,10 +230,10 @@
 				"sid": 288471112288373,
 				"name": "Animation 1",
 				"isLooping": false,
-				"isPingPong": false,
+				"isPingPong": true,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 2
 			}
 		],
 		"subfolders": []

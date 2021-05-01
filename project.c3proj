@@ -26,7 +26,9 @@
 	"uniqueId": "knbzl4imixx",
 	"objectTypes": {
 		"items": [
-			"Tilemap"
+			"Tilemap",
+			"Sprite",
+			"Sprite2"
 		],
 		"subfolders": [
 			{
@@ -51,13 +53,15 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Layout 1",
+			"Layout 2"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Event sheet 1",
+			"Event sheet 2"
 		],
 		"subfolders": []
 	},
@@ -204,7 +208,7 @@
 		"enhancedAccelerationPrecision": true,
 		"cordovaiOSScheme": "app"
 	},
-	"viewportWidth": 360,
-	"viewportHeight": 480,
+	"viewportWidth": 272,
+	"viewportHeight": 128,
 	"firstLayout": null
 }
