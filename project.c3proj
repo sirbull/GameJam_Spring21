@@ -69,6 +69,14 @@
 			"author": "Scirra",
 			"version": "r241",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
 		}
 	],
 	"uniqueId": "knbzl4imixx",
@@ -92,7 +100,9 @@
 			"Audio",
 			"spr_menu_start",
 			"spr_menu_credits",
-			"SpriteFont"
+			"SpriteFont",
+			"spr_fade",
+			"Sprite"
 		],
 		"subfolders": []
 	},

@@ -22,6 +22,39 @@
 			],
 			"actions": [
 				{
+					"id": "tween-one-property",
+					"objectClass": "spr_fade",
+					"sid": 875242493525624,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fades\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "0.5",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 983231411552644,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "spr_fade",
+					"sid": 271801923630346,
+					"parameters": {
+						"x": "-200",
+						"y": "-200"
+					}
+				},
+				{
 					"id": "set-animation-frame",
 					"objectClass": "spr_menu_sound",
 					"sid": 423829563877353,
@@ -41,11 +74,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 700350461538170,
+					"sid": 765607952577654,
 					"parameters": {
 						"audio-file": "PrincessQuest",
 						"loop": "looping",
-						"volume": "0",
+						"volume": "-10",
 						"tag-optional": "\"music_menu\""
 					}
 				}
@@ -87,20 +120,45 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 538871948787560,
+					"sid": 770237629201444,
 					"parameters": {
 						"audio-file": "sfx_PowerUp",
 						"loop": "not-looping",
-						"volume": "20",
+						"volume": "30",
 						"tag-optional": "\"sfx_start\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "spr_fade",
+					"sid": 160776899971579,
+					"parameters": {
+						"x": "0",
+						"y": "0"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "spr_fade",
+					"sid": 818735678984715,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"fades\"",
+						"property": "offsetOpacity",
+						"end-value": "100",
+						"time": "0.5",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
 					}
 				},
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 751430854936271,
+					"sid": 763799266097157,
 					"parameters": {
-						"seconds": "1.0"
+						"seconds": "1.3"
 					}
 				},
 				{

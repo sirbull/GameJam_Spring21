@@ -336,8 +336,8 @@
 						}
 					},
 					"world": {
-						"x": 184.9317092807746,
-						"y": 34.22654002389032,
+						"x": 178.40466197673715,
+						"y": 37.61861143629484,
 						"width": 131,
 						"height": 40,
 						"originX": 0.5,
@@ -413,7 +413,7 @@
 				{
 					"type": "SpriteFont",
 					"properties": {
-						"text": "CREATED BY HALLWAR & SIRBULL MUSIC BY SNIKENDE ULLTEPPE",
+						"text": "CREATED BY HALLWAR & SIRBULL MUSIC BY KELMORVATSATIKI",
 						"enable-bbcode": true,
 						"character-width": 7,
 						"character-height": 9,
@@ -447,9 +447,145 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Sprite",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 25,
+					"instanceVariables": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 10,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 10,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 12,
+								"period-random": 2,
+								"period-offset": 0,
+								"period-offset-random": 2,
+								"magnitude": 4,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine3": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 12,
+								"period-random": 2,
+								"period-offset": 0,
+								"period-offset-random": 2,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 182.0394065159712,
+						"y": 75.89844012521476,
+						"width": 64,
+						"height": 40,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 909712487695509,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "Fade",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "spr_fade",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 9,
+					"instanceVariables": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 275,
+						"height": 130,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 979711968731976,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [

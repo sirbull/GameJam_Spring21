@@ -129,6 +129,39 @@
 					],
 					"actions": [
 						{
+							"id": "tween-one-property",
+							"objectClass": "spr_fade",
+							"sid": 421131277184802,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"fades\"",
+								"property": "offsetOpacity",
+								"end-value": "0",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 325943988197497,
+							"parameters": {
+								"seconds": "0.5"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "spr_fade",
+							"sid": 978429829110414,
+							"parameters": {
+								"x": "-200",
+								"y": "-200"
+							}
+						},
+						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 393606352756362,
@@ -165,21 +198,13 @@
 							}
 						},
 						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 101724795795042,
-							"parameters": {
-								"seconds": "0.5"
-							}
-						},
-						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 690702413444956,
+							"sid": 161068048692271,
 							"parameters": {
 								"audio-file": "RabbitTown",
 								"loop": "not-looping",
-								"volume": "0",
+								"volume": "-10",
 								"tag-optional": "\"\""
 							}
 						}
