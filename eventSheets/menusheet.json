@@ -22,6 +22,11 @@
 			],
 			"actions": [
 				{
+					"id": "stop-animation",
+					"objectClass": "spr_menu_sunflower",
+					"sid": 970980734226272
+				},
+				{
 					"id": "tween-one-property",
 					"objectClass": "spr_fade",
 					"sid": 875242493525624,
@@ -126,6 +131,22 @@
 						"loop": "not-looping",
 						"volume": "30",
 						"tag-optional": "\"sfx_start\""
+					}
+				},
+				{
+					"id": "start-animation",
+					"objectClass": "spr_menu_sunflower",
+					"sid": 741427744639871,
+					"parameters": {
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 164727959835623,
+					"parameters": {
+						"seconds": "1.3"
 					}
 				},
 				{

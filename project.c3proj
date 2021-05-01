@@ -102,7 +102,8 @@
 			"spr_menu_credits",
 			"SpriteFont",
 			"spr_fade",
-			"Sprite"
+			"Sprite",
+			"spr_menu_sunflower"
 		],
 		"subfolders": []
 	},

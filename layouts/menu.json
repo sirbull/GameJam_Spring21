@@ -2,64 +2,6 @@
 	"name": "Menu",
 	"layers": [
 		{
-			"name": "Plants",
-			"overriden": 0,
-			"instances": [
-				{
-					"type": "spr_pl_sunflower",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "ani_sunfl",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 11,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 177.79506625661134,
-						"y": 86.02922772101543,
-						"width": 16,
-						"height": 64,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				}
-			],
-			"sid": 314827447720149,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				1,
-				1,
-				1,
-				1
-			],
-			"isTransparent": false,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"global": false
-		},
-		{
 			"name": "BG",
 			"overriden": 0,
 			"instances": [
@@ -106,6 +48,64 @@
 				0.3686274509803922,
 				0.3686274509803922,
 				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "Plants",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "spr_menu_sunflower",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "ani_sunfl",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 26,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 100.40209163100818,
+						"y": 76.02854153246238,
+						"width": 16,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 314827447720149,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
 				1
 			],
 			"isTransparent": true,
