@@ -73,6 +73,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "need_Water",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 885407803705771
+		},
+		{
+			"eventType": "variable",
 			"name": "water_marked",
 			"type": "boolean",
 			"initialValue": "false",
@@ -110,6 +120,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 858316797829092
+		},
+		{
+			"eventType": "variable",
+			"name": "state_sunflower",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 904252580489603
 		},
 		{
 			"eventType": "variable",
@@ -173,6 +193,11 @@
 								"loop": "no",
 								"ping-pong": "no"
 							}
+						},
+						{
+							"id": "stop-animation",
+							"objectClass": "Sprite",
+							"sid": 752455015929472
 						},
 						{
 							"id": "wait",
@@ -250,11 +275,11 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 523341434580038,
+							"sid": 935431280081166,
 							"parameters": {
 								"audio-file": "RabbitTown",
 								"loop": "looping",
-								"volume": "-50",
+								"volume": "-30",
 								"tag-optional": "\"\""
 							}
 						}
@@ -519,6 +544,14 @@
 									}
 								},
 								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_small_icons",
+									"sid": 588072425093722,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 802916078272722,
@@ -773,9 +806,9 @@
 								{
 									"id": "set-animation-frame",
 									"objectClass": "spr_small_icons",
-									"sid": 103118795601567,
+									"sid": 513279331087566,
 									"parameters": {
-										"frame-number": "2"
+										"frame-number": "4"
 									}
 								},
 								{
@@ -802,6 +835,15 @@
 									"sid": 500117102716924,
 									"parameters": {
 										"variable": "C1_water_able",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 830633130064129,
+									"parameters": {
+										"variable": "need_Water",
 										"value": "true"
 									}
 								}
@@ -1082,7 +1124,7 @@
 						},
 						{
 							"eventType": "comment",
-							"text": "Place wet dirt"
+							"text": "Water dirt"
 						},
 						{
 							"eventType": "block",
@@ -1112,6 +1154,14 @@
 									"parameters": {
 										"variable": "C1_water_able"
 									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 247509765217445,
+									"parameters": {
+										"variable": "need_Water"
+									}
 								}
 							],
 							"actions": [
@@ -1126,11 +1176,54 @@
 								},
 								{
 									"id": "set-position",
+									"objectClass": "Sprite",
+									"sid": 107615924378814,
+									"parameters": {
+										"x": "72",
+										"y": "82"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Sprite",
+									"sid": 221629816016086,
+									"parameters": {
+										"animation": "\"ani_rain\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 745014597753962,
+									"parameters": {
+										"seconds": "0.5"
+									}
+								},
+								{
+									"id": "set-position",
 									"objectClass": "spr_dirt_wet",
 									"sid": 247376300470156,
 									"parameters": {
 										"x": "72",
 										"y": "108"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_pl_sunflower",
+									"sid": 154318683040462,
+									"parameters": {
+										"frame-number": "3"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Sprite",
+									"sid": 135151165497130,
+									"parameters": {
+										"x": "-50",
+										"y": "-50"
 									}
 								},
 								{
@@ -1149,6 +1242,40 @@
 									"parameters": {
 										"variable": "water_marked",
 										"value": "false"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 635387320807990,
+									"parameters": {
+										"seconds": "random(5,10)"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 185343773966553,
+									"parameters": {
+										"variable": "need_Water",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_small_icons",
+									"sid": 655635901924770,
+									"parameters": {
+										"frame-number": "4"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 677610868520454,
+									"parameters": {
+										"variable": "C1_water_able",
+										"value": "true"
 									}
 								}
 							],
@@ -1197,6 +1324,140 @@
 								}
 							],
 							"sid": 462304590901294
+						},
+						{
+							"eventType": "comment",
+							"text": "Water plant"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 235735300334762,
+									"parameters": {
+										"variable": "state_sunflower",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_pl_sunflower",
+									"sid": 335576538873092,
+									"parameters": {
+										"frame-number": "2"
+									}
+								}
+							],
+							"sid": 248756354990668
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 246513315793793,
+									"parameters": {
+										"variable": "state_sunflower",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_pl_sunflower",
+									"sid": 504422407314879,
+									"parameters": {
+										"frame-number": "3"
+									}
+								}
+							],
+							"sid": 317102240565133
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 471549915193077,
+									"parameters": {
+										"variable": "state_sunflower",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_pl_sunflower",
+									"sid": 211298249252678,
+									"parameters": {
+										"frame-number": "4"
+									}
+								}
+							],
+							"sid": 157971370903821
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 957758892925119,
+									"parameters": {
+										"variable": "state_sunflower",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_pl_sunflower",
+									"sid": 820072254133508,
+									"parameters": {
+										"frame-number": "5"
+									}
+								}
+							],
+							"sid": 319718452898797
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 497829016387478,
+									"parameters": {
+										"variable": "state_sunflower",
+										"comparison": 0,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_pl_sunflower",
+									"sid": 542360574292755,
+									"parameters": {
+										"frame-number": "6"
+									}
+								}
+							],
+							"sid": 268258627632192
 						}
 					],
 					"sid": 364936308798930
@@ -1396,16 +1657,16 @@
 								{
 									"id": "set-position",
 									"objectClass": "spr_pl_sunflower",
-									"sid": 116029498241781,
+									"sid": 913379453641936,
 									"parameters": {
 										"x": "72",
-										"y": "85"
+										"y": "83"
 									}
 								},
 								{
 									"id": "set-animation-frame",
 									"objectClass": "spr_pl_sunflower",
-									"sid": 259209748048186,
+									"sid": 856562524842718,
 									"parameters": {
 										"frame-number": "0"
 									}
@@ -1417,6 +1678,14 @@
 									"parameters": {
 										"variable": "C1_sunflower_able",
 										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_small_icons",
+									"sid": 234527066975728,
+									"parameters": {
+										"frame-number": "3"
 									}
 								},
 								{
@@ -1532,6 +1801,204 @@
 				}
 			],
 			"sid": 714232405282540
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Button_Description",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 411192356115583,
+							"parameters": {
+								"object": "spr_item_shovel"
+							}
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "SpriteFont",
+							"sid": 290295384344429,
+							"parameters": {
+								"unique-id": "37"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont",
+							"sid": 946651359014548,
+							"parameters": {
+								"text": "\"DIG A HOLE.\""
+							}
+						}
+					],
+					"sid": 285802329778470
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 943091783809612,
+							"parameters": {
+								"object": "spr_item_dirt"
+							}
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "SpriteFont",
+							"sid": 861444929216188,
+							"parameters": {
+								"unique-id": "37"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont",
+							"sid": 509978390018421,
+							"parameters": {
+								"text": "\"FILL WITH NEW SOIL.\""
+							}
+						}
+					],
+					"sid": 671839170694372
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 359623786985245,
+							"parameters": {
+								"object": "spr_item_water"
+							}
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "SpriteFont",
+							"sid": 585855890053527,
+							"parameters": {
+								"unique-id": "37"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont",
+							"sid": 131668668771615,
+							"parameters": {
+								"text": "\"POUR WATER.\""
+							}
+						}
+					],
+					"sid": 764832151035921
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 685500119341497,
+							"parameters": {
+								"object": "spr_item_sunflower"
+							}
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "SpriteFont",
+							"sid": 775499781835626,
+							"parameters": {
+								"unique-id": "37"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont",
+							"sid": 388123146233334,
+							"parameters": {
+								"text": "\"PLANT SUN- FLOWER.\""
+							}
+						}
+					],
+					"sid": 273812363398584
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 113476023942906,
+							"parameters": {
+								"object": "spr_item_shovel"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 381016391415310,
+							"parameters": {
+								"object": "spr_item_dirt"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 913004070832382,
+							"parameters": {
+								"object": "spr_item_water"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 946251572064480,
+							"parameters": {
+								"object": "spr_item_sunflower"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "SpriteFont",
+							"sid": 656558190933037,
+							"parameters": {
+								"unique-id": "37"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont",
+							"sid": 891667799815844,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 363979579263078
+				}
+			],
+			"sid": 667648428168567
 		}
 	],
 	"sid": 381076121808650

@@ -106,7 +106,9 @@
 			"spr_menu_sunflower",
 			"spr_dirt",
 			"spr_dirt_wet",
-			"spr_small_icons"
+			"spr_small_icons",
+			"spr_coin",
+			"Sprite"
 		],
 		"subfolders": []
 	},

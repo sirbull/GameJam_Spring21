@@ -79,11 +79,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 765607952577654,
+					"sid": 784558648673902,
 					"parameters": {
 						"audio-file": "PrincessQuest",
 						"loop": "looping",
-						"volume": "-10",
+						"volume": "-30",
 						"tag-optional": "\"music_menu\""
 					}
 				}
