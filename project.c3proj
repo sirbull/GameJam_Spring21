@@ -42,7 +42,6 @@
 	"uniqueId": "knbzl4imixx",
 	"objectTypes": {
 		"items": [
-<<<<<<< HEAD
 			"Game_Tilemap",
 			"spr_menu_start",
 			"spr_menu_sound",
@@ -57,12 +56,6 @@
 			"spr_cloud3",
 			"Mouse",
 			"spr_marker16"
-=======
-			"Tilemap",
-			"Sprite",
-			"Sprite2",
-			"Sprite3"
->>>>>>> b0b080de28aab31efbeaa08881f8377160732b2f
 		],
 		"subfolders": []
 	},
