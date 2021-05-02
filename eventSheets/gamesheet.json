@@ -172,6 +172,36 @@
 			"sid": 967865539556587
 		},
 		{
+			"eventType": "variable",
+			"name": "totalSeconds",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 441433738600878
+		},
+		{
+			"eventType": "variable",
+			"name": "gameMinutes",
+			"type": "number",
+			"initialValue": "4",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 668814633915371
+		},
+		{
+			"eventType": "variable",
+			"name": "gameSeconds",
+			"type": "number",
+			"initialValue": "59",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 157260856863914
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Init",
@@ -2935,56 +2965,6 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
-					"eventType": "variable",
-					"name": "totalSeconds",
-					"type": "number",
-					"initialValue": "300",
-					"comment": "",
-					"isStatic": false,
-					"isConstant": false,
-					"sid": 475189780690844
-				},
-				{
-					"eventType": "variable",
-					"name": "minuteLeft",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "",
-					"isStatic": false,
-					"isConstant": false,
-					"sid": 325010936212917
-				},
-				{
-					"eventType": "variable",
-					"name": "hour",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "",
-					"isStatic": false,
-					"isConstant": false,
-					"sid": 516846972557375
-				},
-				{
-					"eventType": "variable",
-					"name": "minute",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "",
-					"isStatic": false,
-					"isConstant": false,
-					"sid": 319740785739538
-				},
-				{
-					"eventType": "variable",
-					"name": "remainingSeconds",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "",
-					"isStatic": false,
-					"isConstant": false,
-					"sid": 521643699251521
-				},
-				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -2994,63 +2974,9 @@
 							"parameters": {
 								"interval-seconds": "1"
 							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 952518800005554,
-							"parameters": {
-								"variable": "totalSeconds",
-								"comparison": 5,
-								"value": "0"
-							}
-						},
-						{
-							"id": "pick-by-unique-id",
-							"objectClass": "SpriteFont",
-							"sid": 318058523117085,
-							"parameters": {
-								"unique-id": "53"
-							}
 						}
 					],
 					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 867108889901669,
-							"parameters": {
-								"variable": "minuteLeft",
-								"value": "floor(totalSeconds-(hour*3600))"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 245141567125356,
-							"parameters": {
-								"variable": "hour",
-								"value": "floor(totalSeconds/3600)"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 640076156178473,
-							"parameters": {
-								"variable": "minute",
-								"value": "floor(minuteLeft/60)"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 343491425540759,
-							"parameters": {
-								"variable": "remainingSeconds",
-								"value": "totalSeconds%60"
-							}
-						},
 						{
 							"id": "subtract-from-eventvar",
 							"objectClass": "System",
@@ -3059,17 +2985,337 @@
 								"variable": "totalSeconds",
 								"value": "1"
 							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "SpriteFont",
-							"sid": 967832486004033,
-							"parameters": {
-								"text": "zeropad(hour,2)&\":\"&zeropad(minute,2)&\":\"&zeropad(remainingSeconds,2)"
-							}
 						}
 					],
 					"sid": 840553927770977
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 840831737799770
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "SpriteFont",
+							"sid": 640977544975300,
+							"parameters": {
+								"unique-id": "53"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont",
+							"sid": 903546323344292,
+							"parameters": {
+								"text": "gameSeconds"
+							}
+						}
+					],
+					"sid": 295016049264538
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 843600440970224
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "SpriteFont",
+							"sid": 492511528992450,
+							"parameters": {
+								"unique-id": "54"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont",
+							"sid": 722278863754778,
+							"parameters": {
+								"text": "gameMinutes"
+							}
+						}
+					],
+					"sid": 579199250205265
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 189123529385832,
+							"parameters": {
+								"variable": "gameSeconds",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 716531327366910,
+							"parameters": {
+								"variable": "gameSeconds",
+								"value": "59"
+							}
+						}
+					],
+					"sid": 538268569054164
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 576878722113876,
+							"parameters": {
+								"interval-seconds": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 575979233812688,
+							"parameters": {
+								"variable": "gameSeconds",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 426472825381542
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 586848699751146,
+							"parameters": {
+								"interval-seconds": "60"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 658698734260529,
+							"parameters": {
+								"variable": "gameMinutes",
+								"value": "1"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 602152017663475,
+							"parameters": {
+								"variable": "gameMinutes",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 115934490381884
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 657423596684302,
+							"parameters": {
+								"first-value": "totalSeconds",
+								"comparison": 2,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "Sprite",
+							"sid": 942686309727968,
+							"parameters": {
+								"unique-id": "56"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Sprite",
+							"sid": 504215257623567,
+							"parameters": {
+								"x": "158.840952",
+								"y": "60.459895"
+							}
+						}
+					],
+					"sid": 779165587217664
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 946001023061635,
+							"parameters": {
+								"first-value": "totalSeconds",
+								"comparison": 2,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "SpriteFont",
+							"sid": 674194540676312,
+							"parameters": {
+								"unique-id": "57"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "SpriteFont",
+							"sid": 835959540258142,
+							"parameters": {
+								"x": "109.19378",
+								"y": "45.878787"
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "SpriteFont",
+							"sid": 944878385848458
+						}
+					],
+					"sid": 272773165593245
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 678429312975912,
+							"parameters": {
+								"first-value": "totalSeconds",
+								"comparison": 2,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "SpriteFont",
+							"sid": 110989414559271,
+							"parameters": {
+								"unique-id": "58"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "SpriteFont",
+							"sid": 277947772745108,
+							"parameters": {
+								"x": "109.026911",
+								"y": "57.529299"
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "SpriteFont",
+							"sid": 857748850074710
+						}
+					],
+					"sid": 245701054712211
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 284835832173286,
+							"parameters": {
+								"first-value": "totalSeconds",
+								"comparison": 2,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-bottom",
+							"objectClass": "spr_fadeWIN",
+							"sid": 299022110649674
+						},
+						{
+							"id": "set-position",
+							"objectClass": "spr_fadeWIN",
+							"sid": 345645912586884,
+							"parameters": {
+								"x": "0",
+								"y": "0"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 662612241978553,
+							"parameters": {
+								"time-scale": "0"
+							}
+						}
+					],
+					"sid": 614721644580216
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 185426087075394
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "SpriteFont",
+							"sid": 871486011210947,
+							"parameters": {
+								"unique-id": "58"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont",
+							"sid": 602169377162318,
+							"parameters": {
+								"text": "Player_Currency"
+							}
+						}
+					],
+					"sid": 158381378089937
 				}
 			],
 			"sid": 158896681088549

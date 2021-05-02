@@ -144,7 +144,9 @@
 			"spr_ant_hive",
 			"spr_ant",
 			"Particles2",
-			"spr_pl_sunflowerdance"
+			"spr_pl_sunflowerdance",
+			"spr_fadeWIN",
+			"Sprite"
 		],
 		"subfolders": []
 	},
