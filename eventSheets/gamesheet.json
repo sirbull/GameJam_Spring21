@@ -597,6 +597,15 @@
 										"variable": "C1_sunflower_able",
 										"value": "true"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 751779061597601,
+									"parameters": {
+										"variable": "item_shovel_down",
+										"value": "false"
+									}
 								}
 							],
 							"sid": 788196196154663
@@ -929,6 +938,15 @@
 									"sid": 586656101733513,
 									"parameters": {
 										"variable": "dirt_marked",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 630761783218178,
+									"parameters": {
+										"variable": "item_dirt_down",
 										"value": "false"
 									}
 								}
@@ -1351,6 +1369,15 @@
 									}
 								},
 								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 308855553026687,
+									"parameters": {
+										"variable": "item_water_down",
+										"value": "false"
+									}
+								},
+								{
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 420643288300552,
@@ -1390,6 +1417,7 @@
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 185343773966553,
+									"disabled": true,
 									"parameters": {
 										"variable": "need_Water",
 										"value": "true"
@@ -1398,16 +1426,17 @@
 								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 677610868520454,
+									"sid": 260498002325139,
 									"parameters": {
 										"variable": "C1_water_able",
-										"value": "true"
+										"value": "false"
 									}
 								},
 								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 991492769405667,
+									"disabled": true,
 									"parameters": {
 										"variable": "water_marked",
 										"value": "true"
@@ -1883,10 +1912,10 @@
 								{
 									"id": "add-to-eventvar",
 									"objectClass": "System",
-									"sid": 301184215518430,
+									"sid": 966575057581159,
 									"parameters": {
 										"variable": "Player_Currency",
-										"value": "14"
+										"value": "20"
 									}
 								},
 								{
@@ -1940,6 +1969,42 @@
 									"parameters": {
 										"variable": "state_sunflower",
 										"value": "0"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 802714498000000,
+									"parameters": {
+										"variable": "C1_shovel_able",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 489589201999346,
+									"parameters": {
+										"variable": "C1_sunflower_able",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 600790173778462,
+									"parameters": {
+										"variable": "C1_water_able",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 488834456677828,
+									"parameters": {
+										"variable": "C1_dirt_able",
+										"value": "false"
 									}
 								}
 							],
@@ -2201,6 +2266,15 @@
 									"parameters": {
 										"variable": "water_marked",
 										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 509537094132684,
+									"parameters": {
+										"variable": "item_sunflower_down",
+										"value": "false"
 									}
 								},
 								{
@@ -2852,6 +2926,153 @@
 				}
 			],
 			"sid": 398675680890330
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Game_Timer",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "totalSeconds",
+					"type": "number",
+					"initialValue": "300",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 475189780690844
+				},
+				{
+					"eventType": "variable",
+					"name": "minuteLeft",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 325010936212917
+				},
+				{
+					"eventType": "variable",
+					"name": "hour",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 516846972557375
+				},
+				{
+					"eventType": "variable",
+					"name": "minute",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 319740785739538
+				},
+				{
+					"eventType": "variable",
+					"name": "remainingSeconds",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 521643699251521
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 425002302092936,
+							"parameters": {
+								"interval-seconds": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 952518800005554,
+							"parameters": {
+								"variable": "totalSeconds",
+								"comparison": 5,
+								"value": "0"
+							}
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "SpriteFont",
+							"sid": 318058523117085,
+							"parameters": {
+								"unique-id": "53"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 867108889901669,
+							"parameters": {
+								"variable": "minuteLeft",
+								"value": "floor(totalSeconds-(hour*3600))"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 245141567125356,
+							"parameters": {
+								"variable": "hour",
+								"value": "floor(totalSeconds/3600)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 640076156178473,
+							"parameters": {
+								"variable": "minute",
+								"value": "floor(minuteLeft/60)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 343491425540759,
+							"parameters": {
+								"variable": "remainingSeconds",
+								"value": "totalSeconds%60"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 873455887019104,
+							"parameters": {
+								"variable": "totalSeconds",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont",
+							"sid": 967832486004033,
+							"parameters": {
+								"text": "zeropad(hour,2)&\":\"&zeropad(minute,2)&\":\"&zeropad(remainingSeconds,2)"
+							}
+						}
+					],
+					"sid": 840553927770977
+				}
+			],
+			"sid": 158896681088549
 		}
 	],
 	"sid": 381076121808650

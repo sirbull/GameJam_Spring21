@@ -526,6 +526,44 @@
 						"angle": 4.71238898038469,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "SpriteFont",
+					"properties": {
+						"text": " ",
+						"enable-bbcode": true,
+						"character-width": 7,
+						"character-height": 9,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "right",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 53,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 127.35181627879142,
+						"y": 115.68650083478164,
+						"width": 69.55163666118777,
+						"height": 11.141861633919433,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 473852892214928,
