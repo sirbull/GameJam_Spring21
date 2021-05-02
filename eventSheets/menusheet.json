@@ -79,12 +79,21 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 784558648673902,
+					"sid": 475764751471969,
 					"parameters": {
-						"audio-file": "PrincessQuest",
+						"audio-file": "TitleScreen_v_2",
 						"loop": "looping",
-						"volume": "-30",
+						"volume": "-20",
 						"tag-optional": "\"music_menu\""
+					}
+				},
+				{
+					"id": "seek-to",
+					"objectClass": "Audio",
+					"sid": 473733795891980,
+					"parameters": {
+						"tag": "\"music_menu\"",
+						"position": "2"
 					}
 				}
 			],
@@ -217,6 +226,25 @@
 					}
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 138005841415575,
+					"parameters": {
+						"audio-file": "Click2",
+						"loop": "not-looping",
+						"volume": "-13",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 600381593962365,
+					"parameters": {
+						"seconds": "0.3"
+					}
+				},
+				{
 					"id": "set-silent",
 					"objectClass": "Audio",
 					"sid": 343966592479716,
@@ -237,6 +265,11 @@
 					"parameters": {
 						"variable": "Sound_Muted"
 					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 655231998556110
 				}
 			],
 			"actions": [
@@ -262,6 +295,11 @@
 						"variable": "Sound_Muted"
 					},
 					"isInverted": true
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 486536636248136
 				}
 			],
 			"actions": [

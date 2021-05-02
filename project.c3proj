@@ -108,7 +108,11 @@
 			"spr_dirt_wet",
 			"spr_small_icons",
 			"spr_coin",
-			"Sprite"
+			"Sprite",
+			"spr_CurrencyCoin",
+			"Sprite2",
+			"Sprite3",
+			"par_coin_falling"
 		],
 		"subfolders": []
 	},
@@ -143,6 +147,41 @@
 					"name": "sfx_PowerUp.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 743096765348004
+				},
+				{
+					"name": "FinishedDing.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 166381921523431
+				},
+				{
+					"name": "WaterPouring.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 389899901778010
+				},
+				{
+					"name": "PlantGrowth.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 629016645355076
+				},
+				{
+					"name": "Planting.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 999976483581053
+				},
+				{
+					"name": "Click2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 810292905786945
+				},
+				{
+					"name": "Click1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 671578295420525
+				},
+				{
+					"name": "CoinCollect.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 223100775559058
 				}
 			],
 			"subfolders": []
@@ -158,6 +197,11 @@
 					"name": "RabbitTown.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 754914670784471
+				},
+				{
+					"name": "TitleScreen_v_2.mp3",
+					"type": "audio/mpeg",
+					"sid": 417855594532060
 				}
 			],
 			"subfolders": []

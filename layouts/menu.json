@@ -365,8 +365,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 27.782906725325034,
-						"y": 115.18376543541814,
+						"x": 257.12543160444454,
+						"y": 114.64427494935293,
 						"width": 16,
 						"height": 16,
 						"originX": 0.5,
@@ -413,7 +413,7 @@
 				{
 					"type": "SpriteFont",
 					"properties": {
-						"text": "CREATED BY HALLWAR & SIRBULL MUSIC BY KELMORVATSATIKI",
+						"text": "CREATED BY HALLVARD SXLE & TORGEIR BULL MUSIC BY ERLEND MOEN",
 						"enable-bbcode": true,
 						"character-width": 7,
 						"character-height": 9,
@@ -432,9 +432,9 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 45.34059001489746,
-						"y": 106.20544062449986,
-						"width": 200,
+						"x": 6.683340167591524,
+						"y": 105.43952164975758,
+						"width": 231.7255846787195,
 						"height": 19.478951050037978,
 						"originX": 0,
 						"originY": 0,

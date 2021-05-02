@@ -3,13 +3,23 @@
 	"events": [
 		{
 			"eventType": "variable",
+			"name": "Player_Currency",
+			"type": "number",
+			"initialValue": "50",
+			"comment": "The currency the player got",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 319683967764427
+		},
+		{
+			"eventType": "variable",
 			"name": "C1_shovel_able",
 			"type": "boolean",
 			"initialValue": "false",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 228847673864101
+			"sid": 941285109231721
 		},
 		{
 			"eventType": "variable",
@@ -150,16 +160,6 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 967865539556587
-		},
-		{
-			"eventType": "variable",
-			"name": "Player_Currency",
-			"type": "number",
-			"initialValue": "100",
-			"comment": "The currency the player got",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 864871331960264
 		},
 		{
 			"eventType": "group",
@@ -526,6 +526,15 @@
 									}
 								},
 								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 395886230867555,
+									"parameters": {
+										"variable": "Player_Currency",
+										"value": "Player_Currency-1"
+									}
+								},
+								{
 									"id": "set-position",
 									"objectClass": "spr_hole",
 									"sid": 958777571514695,
@@ -792,6 +801,15 @@
 									"parameters": {
 										"x": "-50",
 										"y": "-50"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 386584957690333,
+									"parameters": {
+										"variable": "Player_Currency",
+										"value": "Player_Currency-3"
 									}
 								},
 								{
@@ -1184,12 +1202,32 @@
 									}
 								},
 								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 277688784142820,
+									"parameters": {
+										"audio-file": "WaterPouring",
+										"loop": "not-looping",
+										"volume": "-5",
+										"tag-optional": "\"\""
+									}
+								},
+								{
 									"id": "set-animation",
 									"objectClass": "Sprite",
 									"sid": 221629816016086,
 									"parameters": {
 										"animation": "\"ani_rain\"",
 										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 789340117381808,
+									"parameters": {
+										"variable": "Player_Currency",
+										"value": "Player_Currency-3"
 									}
 								},
 								{
@@ -1646,12 +1684,32 @@
 									}
 								},
 								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 309772272945252,
+									"parameters": {
+										"variable": "Player_Currency",
+										"value": "Player_Currency-7"
+									}
+								},
+								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 235694686847334,
 									"parameters": {
 										"variable": "sunfl_marked",
 										"value": "false"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 114905652263576,
+									"parameters": {
+										"audio-file": "Planting",
+										"loop": "not-looping",
+										"volume": "-5",
+										"tag-optional": "\"\""
 									}
 								},
 								{
@@ -1833,9 +1891,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "SpriteFont",
-							"sid": 946651359014548,
+							"sid": 122721355217572,
 							"parameters": {
-								"text": "\"DIG A HOLE.\""
+								"text": "\"DIG PERFECT HOLE.\""
 							}
 						}
 					],
@@ -1865,7 +1923,7 @@
 						{
 							"id": "set-text",
 							"objectClass": "SpriteFont",
-							"sid": 509978390018421,
+							"sid": 514300963619973,
 							"parameters": {
 								"text": "\"FILL WITH NEW SOIL.\""
 							}
@@ -1897,9 +1955,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "SpriteFont",
-							"sid": 131668668771615,
+							"sid": 175416421885313,
 							"parameters": {
-								"text": "\"POUR WATER.\""
+								"text": "\"POUR FANCY WATER.\""
 							}
 						}
 					],
@@ -1999,6 +2057,149 @@
 				}
 			],
 			"sid": 667648428168567
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player Currency",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "SpriteFont",
+							"sid": 185819351030641,
+							"parameters": {
+								"unique-id": "40"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont",
+							"sid": 365146088485812,
+							"parameters": {
+								"text": "Player_Currency"
+							}
+						}
+					],
+					"sid": 673946623810818
+				}
+			],
+			"sid": 967414223564669
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "RandomCoins",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 231048423461619
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 224587786913482,
+							"parameters": {
+								"seconds": "random(0,5)"
+							}
+						}
+					],
+					"sid": 957473636805824,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 144385694448326
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 358133398992977,
+									"parameters": {
+										"seconds": "random(5,12)"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 809666590398491,
+									"parameters": {
+										"object-to-create": "par_coin_falling",
+										"layer": "\"game\"",
+										"x": "random(55,260)",
+										"y": "random(5, 90)",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 504296254534695
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 853650544262131,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "par_coin_falling"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 987399422557393,
+							"parameters": {
+								"variable": "Player_Currency",
+								"value": "1"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 404545191288187,
+							"parameters": {
+								"audio-file": "CoinCollect",
+								"loop": "not-looping",
+								"volume": "-5",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "par_coin_falling",
+							"sid": 264812562080467
+						}
+					],
+					"sid": 433812019085266
+				}
+			],
+			"sid": 168236214000995
 		}
 	],
 	"sid": 381076121808650

@@ -467,7 +467,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 23.88099601793072,
-						"y": 58.652718450596545,
+						"y": 74.03012389853123,
 						"width": 35,
 						"height": 14,
 						"originX": 0.5,
@@ -496,7 +496,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 23.705871889794153,
-						"y": 43.47827193329505,
+						"y": 56.32745154841756,
 						"width": 35,
 						"height": 14,
 						"originX": 0.5,
@@ -697,7 +697,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 22.610072556685484,
-						"y": 38.89066533868066,
+						"y": 51.73984495380317,
 						"width": 10.931592551284805,
 						"height": 11.141861633919433,
 						"originX": 0,
@@ -726,7 +726,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 36.33594796037062,
-						"y": 44.214011360226955,
+						"y": 57.063190975349464,
 						"width": 8,
 						"height": 8,
 						"originX": 0.5,
@@ -737,7 +737,7 @@
 							1,
 							1
 						],
-						"angle": 0.0036363171164595087,
+						"angle": 0,
 						"zElevation": 0
 					}
 				},
@@ -764,7 +764,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 22.942581072593995,
-						"y": 53.85252644631154,
+						"y": 69.22993189424622,
 						"width": 10.566098650953393,
 						"height": 11.141861633919433,
 						"originX": 0,
@@ -793,7 +793,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 36.45868246839362,
-						"y": 59.16906354400452,
+						"y": 74.54646899193921,
 						"width": 8,
 						"height": 8,
 						"originX": 0.5,
@@ -863,6 +863,131 @@
 						"y": 63.80092047564884,
 						"width": 16,
 						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_CurrencyCoin",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 39,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 260.12618557104105,
+						"y": 114.70344186806608,
+						"width": 8,
+						"height": 8,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.28222678124736,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SpriteFont",
+					"properties": {
+						"text": " ",
+						"enable-bbcode": true,
+						"character-width": 7,
+						"character-height": 9,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "right",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 40,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 213.1386164037241,
+						"y": 110.22244196138067,
+						"width": 43.68641160468216,
+						"height": 11.141861633919433,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.00370855517962404,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "ani_scarecrow",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 41,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 245.85650198411602,
+						"y": 80.25282439587167,
+						"width": 16,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite3",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "ani_bird",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 42,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 34.067793461449014,
+						"y": -21.2282541518413,
+						"width": 16,
+						"height": 16,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
