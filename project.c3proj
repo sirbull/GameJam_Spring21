@@ -146,7 +146,9 @@
 			"Particles2",
 			"spr_pl_sunflowerdance",
 			"spr_fadeWIN",
-			"Sprite"
+			"Sprite",
+			"Sprite2",
+			"Sprite3"
 		],
 		"subfolders": []
 	},
