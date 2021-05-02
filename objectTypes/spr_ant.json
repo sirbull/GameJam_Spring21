@@ -1,0 +1,244 @@
+{
+	"name": "spr_ant",
+	"plugin-id": "Sprite",
+	"sid": 457896659983764,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 603201882803159
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 323881902801231
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 8,
+						"height": 8,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5117056,
+						"collisionPoly": {
+							"points": [
+								0.75,
+								0.75,
+								0.5,
+								0.75,
+								0.25,
+								0.625,
+								0.75,
+								0.75,
+								0.5,
+								0.875,
+								0.125,
+								0.75
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 8,
+						"height": 8,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9348830,
+						"collisionPoly": {
+							"points": [
+								0.75,
+								0.75,
+								0.5,
+								0.75,
+								0.25,
+								0.625,
+								0.75,
+								0.75,
+								0.5,
+								0.875,
+								0.125,
+								0.75
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 8,
+						"height": 8,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8363374,
+						"collisionPoly": {
+							"points": [
+								0.5,
+								0.75,
+								0.125,
+								0.75,
+								0.5,
+								0.875,
+								0.125,
+								0.75
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 8,
+						"height": 8,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4450194,
+						"collisionPoly": {
+							"points": [
+								0.5,
+								0.75,
+								0.125,
+								0.75,
+								0.5,
+								0.875,
+								0.125,
+								0.75
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 8,
+						"height": 8,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1557390,
+						"collisionPoly": {
+							"points": [
+								0.75,
+								0.75,
+								0.5,
+								0.75,
+								0.25,
+								0.625,
+								0.75,
+								0.75,
+								0.5,
+								0.875,
+								0.125,
+								0.75
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 8,
+						"height": 8,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1692892,
+						"collisionPoly": {
+							"points": [
+								0.75,
+								0.75,
+								0.5,
+								0.75,
+								0.25,
+								0.625,
+								0.75,
+								0.75,
+								0.5,
+								0.875,
+								0.125,
+								0.75
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 8,
+						"height": 8,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4007293,
+						"collisionPoly": {
+							"points": [
+								0.75,
+								0.75,
+								0.5,
+								0.75,
+								0.75,
+								0.75,
+								0.5,
+								0.875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 8,
+						"height": 8,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8645274,
+						"collisionPoly": {
+							"points": [
+								0.75,
+								0.75,
+								0.5,
+								0.75,
+								0.75,
+								0.75,
+								0.5,
+								0.875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 369518278841583,
+				"name": "ani_ant",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

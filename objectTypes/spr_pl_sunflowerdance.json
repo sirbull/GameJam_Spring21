@@ -1,0 +1,185 @@
+{
+	"name": "spr_pl_sunflowerdance",
+	"plugin-id": "Sprite",
+	"sid": 784597871312592,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 80,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2538198,
+						"collisionPoly": {
+							"points": [
+								0.328125,
+								0.2625,
+								0.471435546875,
+								0.180133056640625,
+								0.6332321166992188,
+								0.191058349609375,
+								0.7093582153320312,
+								0.47809448242187497,
+								0.702301025390625,
+								1,
+								0.3509979248046875,
+								1,
+								0.33803558349609375,
+								0.6342956542968752,
+								0.34027862548828125,
+								0.431317138671875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 64,
+						"height": 80,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8192379,
+						"collisionPoly": {
+							"points": [
+								0.328125,
+								0.2625,
+								0.471435546875,
+								0.180133056640625,
+								0.6332321166992188,
+								0.191058349609375,
+								0.7093582153320312,
+								0.47809448242187497,
+								0.702301025390625,
+								1,
+								0.3509979248046875,
+								1,
+								0.33803558349609375,
+								0.6342956542968752,
+								0.34027862548828125,
+								0.431317138671875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 64,
+						"height": 80,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1631608,
+						"collisionPoly": {
+							"points": [
+								0.328125,
+								0.2625,
+								0.471435546875,
+								0.180133056640625,
+								0.6332321166992188,
+								0.191058349609375,
+								0.7093582153320312,
+								0.47809448242187497,
+								0.702301025390625,
+								1,
+								0.3509979248046875,
+								1,
+								0.33803558349609375,
+								0.6342956542968752,
+								0.34027862548828125,
+								0.431317138671875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 64,
+						"height": 80,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3834593,
+						"collisionPoly": {
+							"points": [
+								0.328125,
+								0.2625,
+								0.471435546875,
+								0.180133056640625,
+								0.6332321166992188,
+								0.191058349609375,
+								0.7093582153320312,
+								0.47809448242187497,
+								0.702301025390625,
+								1,
+								0.3509979248046875,
+								1,
+								0.33803558349609375,
+								0.6342956542968752,
+								0.34027862548828125,
+								0.431317138671875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 64,
+						"height": 80,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8514409,
+						"collisionPoly": {
+							"points": [
+								0.328125,
+								0.2625,
+								0.471435546875,
+								0.180133056640625,
+								0.6332321166992188,
+								0.191058349609375,
+								0.7093582153320312,
+								0.47809448242187497,
+								0.702301025390625,
+								1,
+								0.3509979248046875,
+								1,
+								0.33803558349609375,
+								0.6342956542968752,
+								0.34027862548828125,
+								0.431317138671875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 662854171048216,
+				"name": "anu_sunfl_fin",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

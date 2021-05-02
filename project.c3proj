@@ -64,6 +64,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Sin",
 			"name": "Sine",
 			"author": "Scirra",
@@ -74,6 +82,14 @@
 			"type": "behavior",
 			"id": "Tween",
 			"name": "Tween",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
 			"author": "Scirra",
 			"version": "r241",
 			"bundled": false
@@ -126,8 +142,9 @@
 			"spr_cloud_2",
 			"spr_Start_sign",
 			"spr_ant_hive",
-			"Sprite",
-			"Particles2"
+			"spr_ant",
+			"Particles2",
+			"spr_pl_sunflowerdance"
 		],
 		"subfolders": []
 	},
@@ -214,19 +231,14 @@
 		"music": {
 			"items": [
 				{
-					"name": "PrincessQuest.webm",
+					"name": "TitleScreenW.webm",
 					"type": "audio/webm; codecs=opus",
-					"sid": 782995409401840
+					"sid": 410339962058369
 				},
 				{
-					"name": "RabbitTown.webm",
+					"name": "InGameMusic.webm",
 					"type": "audio/webm; codecs=opus",
-					"sid": 754914670784471
-				},
-				{
-					"name": "TitleScreen_v_2.mp3",
-					"type": "audio/mpeg",
-					"sid": 417855594532060
+					"sid": 485305544249522
 				}
 			],
 			"subfolders": []

@@ -9,6 +9,11 @@
 			"behaviorId": "solid",
 			"name": "Solid",
 			"sid": 518758287861734
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 377835163272343
 		}
 	],
 	"effectTypes": [],
@@ -23,5 +28,81 @@
 		"imageSpriteId": 726667,
 		"useCollisionPoly": true
 	},
-	"tile-collision-polys": {}
+	"tile-collision-polys": {
+		"3": {
+			"collisionPoly": {
+				"points": [
+					0.0005340576171875,
+					0.25643157958984375,
+					1,
+					0.2486114501953125,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		},
+		"4": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0.2480621337890625,
+					0.9994583129882812,
+					0.24747467041015625,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		},
+		"5": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0.187042236328125,
+					1,
+					0.18494415283203125,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		},
+		"6": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0.24877166748046875,
+					0.9961395263671875,
+					0.2486572265625,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		},
+		"7": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0.25628662109375,
+					0.9994583129882812,
+					0.2491912841796875,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		}
+	}
 }

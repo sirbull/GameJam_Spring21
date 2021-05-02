@@ -97,11 +97,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 475764751471969,
+					"sid": 449547254682977,
 					"parameters": {
-						"audio-file": "TitleScreen_v_2",
+						"audio-file": "TitleScreenW",
 						"loop": "looping",
-						"volume": "-20",
+						"volume": "-10",
 						"tag-optional": "\"music_menu\""
 					}
 				},
@@ -533,6 +533,14 @@
 							"sid": 788002729536645,
 							"parameters": {
 								"from": "current-frame"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 224043789662591,
+							"parameters": {
+								"seconds": "1.0"
 							}
 						}
 					],

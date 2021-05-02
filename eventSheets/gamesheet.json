@@ -5,7 +5,7 @@
 			"eventType": "variable",
 			"name": "Player_Currency",
 			"type": "number",
-			"initialValue": "12",
+			"initialValue": "13",
 			"comment": "The currency the player got",
 			"isStatic": false,
 			"isConstant": false,
@@ -100,6 +100,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 711545338895769
+		},
+		{
+			"eventType": "variable",
+			"name": "RemoveC1_able",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 753091192151784
 		},
 		{
 			"eventType": "variable",
@@ -283,11 +293,11 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 188216552082059,
+							"sid": 746791449881596,
 							"parameters": {
-								"audio-file": "RabbitTown",
+								"audio-file": "InGameMusic",
 								"loop": "looping",
-								"volume": "-30",
+								"volume": "-10",
 								"tag-optional": "\"game_music\""
 							}
 						}
@@ -1352,17 +1362,28 @@
 									"id": "set-animation-frame",
 									"objectClass": "spr_small_icons",
 									"sid": 817741528364537,
+									"disabled": true,
 									"parameters": {
 										"frame-number": "3"
 									}
 								},
 								{
+									"type": "comment",
+									"text": "Set state to 1 not 2",
+									"text-color": [
+										0.8901960784313725,
+										0.20784313725490197,
+										0.20784313725490197,
+										1
+									]
+								},
+								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 191467116480312,
+									"sid": 997675136274447,
 									"parameters": {
 										"variable": "state_sunflower",
-										"value": "2"
+										"value": "1"
 									}
 								},
 								{
@@ -1691,6 +1712,60 @@
 										"volume": "0",
 										"tag-optional": "\"\""
 									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "spr_pl_sunflowerdance",
+									"sid": 430969673486125,
+									"parameters": {
+										"x": "spr_pl_sunflower.X",
+										"y": "spr_pl_sunflower.Y-10"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "spr_pl_sunflower",
+									"sid": 936164304464768,
+									"parameters": {
+										"x": "-50",
+										"y": "-50"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 951563449078358,
+									"parameters": {
+										"seconds": "1"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 901421622642874,
+									"parameters": {
+										"audio-file": "FinishedDing",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 523677749234250,
+									"parameters": {
+										"seconds": "1"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 938728305959483,
+									"parameters": {
+										"variable": "RemoveC1_able",
+										"value": "true"
+									}
 								}
 							],
 							"sid": 524936262848135
@@ -1701,23 +1776,23 @@
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 947997226309772,
+									"sid": 537335427751542,
 									"parameters": {
 										"first-value": "state_sunflower",
 										"comparison": 5,
-										"second-value": "2"
+										"second-value": "1"
+									}
+								},
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 588103465388861,
+									"parameters": {
+										"interval-seconds": "random(2,5)"
 									}
 								}
 							],
 							"actions": [
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 782374675623216,
-									"parameters": {
-										"seconds": "random(4,10)"
-									}
-								},
 								{
 									"id": "add-to-eventvar",
 									"objectClass": "System",
@@ -1734,13 +1809,44 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 685150293162931,
+									"parameters": {
+										"first-value": "state_sunflower",
+										"comparison": 5,
+										"second-value": "7"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 957256103822125,
+									"parameters": {
+										"variable": "state_sunflower",
+										"value": "6"
+									}
+								}
+							],
+							"sid": 462062780036218
+						},
+						{
+							"eventType": "comment",
+							"text": "Remove flower"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "on-object-clicked",
 									"objectClass": "Mouse",
-									"sid": 925040173216419,
+									"sid": 145619108222796,
 									"parameters": {
 										"mouse-button": "left",
 										"click-type": "clicked",
-										"object-clicked": "spr_pl_sunflower"
+										"object-clicked": "spr_pl_sunflowerdance"
 									}
 								},
 								{
@@ -1752,19 +1858,26 @@
 										"comparison": 0,
 										"second-value": "6"
 									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 348317322273791,
+									"parameters": {
+										"variable": "RemoveC1_able"
+									}
 								}
 							],
 							"actions": [
 								{
-									"id": "create-object",
-									"objectClass": "System",
-									"sid": 314453211351769,
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 135046350846307,
 									"parameters": {
-										"object-to-create": "Particles2",
-										"layer": "\"game\"",
-										"x": "spr_pl_sunflower.ImagePointX(1)",
-										"y": "spr_pl_sunflower.ImagePointY(1)",
-										"create-hierarchy": false
+										"audio-file": "FinishedDing",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
 									}
 								},
 								{
@@ -1777,14 +1890,56 @@
 									}
 								},
 								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 161973137467818,
+									"id": "set-position",
+									"objectClass": "spr_pl_sunflowerdance",
+									"sid": 550546720052802,
 									"parameters": {
-										"audio-file": "FinishedDing",
-										"loop": "not-looping",
-										"volume": "0",
-										"tag-optional": "\"\""
+										"x": "-50",
+										"y": "-50"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_pl_sunflower",
+									"sid": 296340322657724,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "spr_dirt_wet",
+									"sid": 928060585201752,
+									"parameters": {
+										"x": "-50",
+										"y": "-50"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "spr_hole",
+									"sid": 497776056451101,
+									"parameters": {
+										"x": "-50",
+										"y": "-50"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "spr_dirt",
+									"sid": 193422332538497,
+									"parameters": {
+										"x": "-50",
+										"y": "-50"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 583802265995900,
+									"parameters": {
+										"variable": "state_sunflower",
+										"value": "0"
 									}
 								}
 							],
