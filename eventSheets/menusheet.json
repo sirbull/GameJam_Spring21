@@ -22,9 +22,27 @@
 			],
 			"actions": [
 				{
+					"id": "set-cursor-from-sprite",
+					"objectClass": "Mouse",
+					"sid": 127400976808735,
+					"parameters": {
+						"sprite": "spr_Cursor"
+					}
+				},
+				{
 					"id": "stop-animation",
 					"objectClass": "spr_menu_sunflower",
 					"sid": 970980734226272
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "spr_Start_sign",
+					"sid": 179357531331658
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "spr_ant_hive",
+					"sid": 728462319814790
 				},
 				{
 					"id": "tween-one-property",
@@ -121,6 +139,14 @@
 			],
 			"actions": [
 				{
+					"id": "start-animation",
+					"objectClass": "spr_Start_sign",
+					"sid": 185620999087413,
+					"parameters": {
+						"from": "beginning"
+					}
+				},
+				{
 					"id": "fade-volume",
 					"objectClass": "Audio",
 					"sid": 650751193084959,
@@ -153,9 +179,9 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 164727959835623,
+					"sid": 803531859907360,
 					"parameters": {
-						"seconds": "1.3"
+						"seconds": "2.3"
 					}
 				},
 				{
@@ -475,6 +501,45 @@
 				}
 			],
 			"sid": 188698954689620
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "AntHive",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 627248824036396
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 665702008903818,
+							"parameters": {
+								"seconds": "3"
+							}
+						},
+						{
+							"id": "start-animation",
+							"objectClass": "spr_ant_hive",
+							"sid": 788002729536645,
+							"parameters": {
+								"from": "current-frame"
+							}
+						}
+					],
+					"sid": 914640164980147
+				}
+			],
+			"sid": 202070379106299
 		}
 	],
 	"sid": 333103805956119

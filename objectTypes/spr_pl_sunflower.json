@@ -32,6 +32,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5625,
+								"y": 0.109375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -56,6 +63,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5625,
+								"y": 0.109375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -80,6 +94,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5625,
+								"y": 0.109375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -104,6 +125,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5625,
+								"y": 0.109375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -128,6 +156,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5625,
+								"y": 0.109375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -152,6 +187,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5625,
+								"y": 0.109375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -176,6 +218,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5625,
+								"y": 0.109375
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -199,6 +248,25 @@
 								1
 							]
 						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5625,
+								"y": 0.109375
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 16,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3702891,
 						"useCollisionPoly": true,
 						"duration": 1
 					}

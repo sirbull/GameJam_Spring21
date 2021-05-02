@@ -1,10 +1,16 @@
 {
-	"name": "Sprite3",
+	"name": "spr_enemy_bird",
 	"plugin-id": "Sprite",
 	"sid": 897727059530232,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 886157550347314
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

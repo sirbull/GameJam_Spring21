@@ -1,0 +1,153 @@
+{
+	"name": "spr_Start_sign",
+	"plugin-id": "Sprite",
+	"sid": 108912906712775,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 148,
+						"height": 164,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8255453,
+						"collisionPoly": {
+							"points": [
+								0.44594594594594594,
+								0.4024390243902439,
+								0.5,
+								0.4024390243902439,
+								0.5472972972972973,
+								0.4024390243902439,
+								0.6959459459459459,
+								0.5,
+								0.5472972972972973,
+								0.5914634146341463,
+								0.5,
+								0.5914634146341463,
+								0.44594594594594594,
+								0.5914634146341463,
+								0.28378378378378377,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 148,
+						"height": 164,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7854127,
+						"collisionPoly": {
+							"points": [
+								0.4594594594594595,
+								0.4146341463414634,
+								0.5,
+								0.42073170731707316,
+								0.527027027027027,
+								0.42073170731707316,
+								0.7027027027027027,
+								0.5,
+								0.5743243243243243,
+								0.6158536585365854,
+								0.5,
+								0.6097560975609756,
+								0.43243243243243246,
+								0.6036585365853658,
+								0.2702702702702703,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 148,
+						"height": 164,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6979064,
+						"collisionPoly": {
+							"points": [
+								0.4864864864864865,
+								0.43902439024390244,
+								0.5,
+								0.4451219512195122,
+								0.5,
+								0.4451219512195122,
+								0.6891891891891891,
+								0.5,
+								0.6283783783783784,
+								0.6646341463414634,
+								0.5,
+								0.6402439024390244,
+								0.41216216216216217,
+								0.6219512195121951,
+								0.25675675675675674,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 148,
+						"height": 164,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9857794,
+						"collisionPoly": {
+							"points": [
+								0.5337837837837838,
+								0.4817073170731707,
+								0.5,
+								0.47560975609756095,
+								0.4797297297297297,
+								0.4634146341463415,
+								0.5945945945945946,
+								0.5,
+								0.6351351351351351,
+								0.6707317073170732,
+								0.5,
+								0.6707317073170732,
+								0.3918918918918919,
+								0.6402439024390244,
+								0.24324324324324326,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 314765448019506,
+				"name": "Ani_Sign",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

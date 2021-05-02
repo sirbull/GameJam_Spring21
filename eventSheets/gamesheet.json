@@ -5,7 +5,7 @@
 			"eventType": "variable",
 			"name": "Player_Currency",
 			"type": "number",
-			"initialValue": "50",
+			"initialValue": "12",
 			"comment": "The currency the player got",
 			"isStatic": false,
 			"isConstant": false,
@@ -179,6 +179,14 @@
 					],
 					"actions": [
 						{
+							"id": "set-cursor-from-sprite",
+							"objectClass": "Mouse",
+							"sid": 701512729474647,
+							"parameters": {
+								"sprite": "spr_Cursor"
+							}
+						},
+						{
 							"id": "tween-one-property",
 							"objectClass": "spr_fade",
 							"sid": 421131277184802,
@@ -196,7 +204,7 @@
 						},
 						{
 							"id": "stop-animation",
-							"objectClass": "Sprite",
+							"objectClass": "spr_water_drip",
 							"sid": 752455015929472
 						},
 						{
@@ -275,12 +283,12 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 935431280081166,
+							"sid": 188216552082059,
 							"parameters": {
 								"audio-file": "RabbitTown",
 								"loop": "looping",
 								"volume": "-30",
-								"tag-optional": "\"\""
+								"tag-optional": "\"game_music\""
 							}
 						}
 					],
@@ -535,6 +543,17 @@
 									}
 								},
 								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 609535537699726,
+									"parameters": {
+										"audio-file": "sfx_dig",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
 									"id": "set-position",
 									"objectClass": "spr_hole",
 									"sid": 958777571514695,
@@ -603,6 +622,15 @@
 									"parameters": {
 										"animation": "\"ani_shovel_no\"",
 										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 336063178548889,
+									"parameters": {
+										"variable": "item_shovel_down",
+										"value": "false"
 									}
 								},
 								{
@@ -749,6 +777,15 @@
 									}
 								},
 								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 473726544510672,
+									"parameters": {
+										"variable": "item_dirt_down",
+										"value": "false"
+									}
+								},
+								{
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 231316235462257,
@@ -813,6 +850,17 @@
 									}
 								},
 								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 104920936971354,
+									"parameters": {
+										"audio-file": "sfx_soil",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
 									"id": "set-position",
 									"objectClass": "spr_dirt",
 									"sid": 915227321638660,
@@ -863,6 +911,15 @@
 									"parameters": {
 										"variable": "need_Water",
 										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 586656101733513,
+									"parameters": {
+										"variable": "dirt_marked",
+										"value": "false"
 									}
 								}
 							],
@@ -1087,6 +1144,15 @@
 									}
 								},
 								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 587550796124868,
+									"parameters": {
+										"variable": "item_water_down",
+										"value": "false"
+									}
+								},
+								{
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 228571566805595,
@@ -1142,7 +1208,7 @@
 						},
 						{
 							"eventType": "comment",
-							"text": "Water dirt"
+							"text": "Water"
 						},
 						{
 							"eventType": "block",
@@ -1194,7 +1260,7 @@
 								},
 								{
 									"id": "set-position",
-									"objectClass": "Sprite",
+									"objectClass": "spr_water_drip",
 									"sid": 107615924378814,
 									"parameters": {
 										"x": "72",
@@ -1214,7 +1280,7 @@
 								},
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite",
+									"objectClass": "spr_water_drip",
 									"sid": 221629816016086,
 									"parameters": {
 										"animation": "\"ani_rain\"",
@@ -1248,16 +1314,8 @@
 									}
 								},
 								{
-									"id": "set-animation-frame",
-									"objectClass": "spr_pl_sunflower",
-									"sid": 154318683040462,
-									"parameters": {
-										"frame-number": "3"
-									}
-								},
-								{
 									"id": "set-position",
-									"objectClass": "Sprite",
+									"objectClass": "spr_water_drip",
 									"sid": 135151165497130,
 									"parameters": {
 										"x": "-50",
@@ -1285,9 +1343,26 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 635387320807990,
+									"sid": 420643288300552,
 									"parameters": {
-										"seconds": "random(5,10)"
+										"seconds": "random(3,7)"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_small_icons",
+									"sid": 817741528364537,
+									"parameters": {
+										"frame-number": "3"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 191467116480312,
+									"parameters": {
+										"variable": "state_sunflower",
+										"value": "2"
 									}
 								},
 								{
@@ -1300,19 +1375,20 @@
 									}
 								},
 								{
-									"id": "set-animation-frame",
-									"objectClass": "spr_small_icons",
-									"sid": 655635901924770,
-									"parameters": {
-										"frame-number": "4"
-									}
-								},
-								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 677610868520454,
 									"parameters": {
 										"variable": "C1_water_able",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 991492769405667,
+									"parameters": {
+										"variable": "water_marked",
 										"value": "true"
 									}
 								}
@@ -1365,7 +1441,7 @@
 						},
 						{
 							"eventType": "comment",
-							"text": "Water plant"
+							"text": "Plant_Grow"
 						},
 						{
 							"eventType": "block",
@@ -1379,6 +1455,11 @@
 										"comparison": 0,
 										"value": "1"
 									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 216807707278948
 								}
 							],
 							"actions": [
@@ -1388,6 +1469,17 @@
 									"sid": 335576538873092,
 									"parameters": {
 										"frame-number": "2"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 230191747081777,
+									"parameters": {
+										"audio-file": "PlantGrowth",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
 									}
 								}
 							],
@@ -1405,6 +1497,11 @@
 										"comparison": 0,
 										"value": "2"
 									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 288491377255427
 								}
 							],
 							"actions": [
@@ -1414,6 +1511,17 @@
 									"sid": 504422407314879,
 									"parameters": {
 										"frame-number": "3"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 997158156662123,
+									"parameters": {
+										"audio-file": "PlantGrowth",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
 									}
 								}
 							],
@@ -1431,6 +1539,11 @@
 										"comparison": 0,
 										"value": "3"
 									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 279430002563164
 								}
 							],
 							"actions": [
@@ -1440,6 +1553,17 @@
 									"sid": 211298249252678,
 									"parameters": {
 										"frame-number": "4"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 165497649427320,
+									"parameters": {
+										"audio-file": "PlantGrowth",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
 									}
 								}
 							],
@@ -1457,6 +1581,11 @@
 										"comparison": 0,
 										"value": "4"
 									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 287955400224671
 								}
 							],
 							"actions": [
@@ -1466,6 +1595,17 @@
 									"sid": 820072254133508,
 									"parameters": {
 										"frame-number": "5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 299230632235199,
+									"parameters": {
+										"audio-file": "PlantGrowth",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
 									}
 								}
 							],
@@ -1483,6 +1623,11 @@
 										"comparison": 0,
 										"value": "5"
 									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 367448059465544
 								}
 							],
 							"actions": [
@@ -1493,9 +1638,157 @@
 									"parameters": {
 										"frame-number": "6"
 									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 234378795241145,
+									"parameters": {
+										"audio-file": "PlantGrowth",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 268258627632192
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 906105278322900,
+									"parameters": {
+										"variable": "state_sunflower",
+										"comparison": 0,
+										"value": "6"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 286993019960859
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "spr_pl_sunflower",
+									"sid": 544571469952815,
+									"parameters": {
+										"frame-number": "7"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 966070359946226,
+									"parameters": {
+										"audio-file": "PlantGrowth",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 524936262848135
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 947997226309772,
+									"parameters": {
+										"first-value": "state_sunflower",
+										"comparison": 5,
+										"second-value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 782374675623216,
+									"parameters": {
+										"seconds": "random(4,10)"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 635130923221883,
+									"parameters": {
+										"variable": "state_sunflower",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 182299203729660
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 925040173216419,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "spr_pl_sunflower"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 818352474538431,
+									"parameters": {
+										"first-value": "state_sunflower",
+										"comparison": 0,
+										"second-value": "6"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 314453211351769,
+									"parameters": {
+										"object-to-create": "Particles2",
+										"layer": "\"game\"",
+										"x": "spr_pl_sunflower.ImagePointX(1)",
+										"y": "spr_pl_sunflower.ImagePointY(1)",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 301184215518430,
+									"parameters": {
+										"variable": "Player_Currency",
+										"value": "14"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 161973137467818,
+									"parameters": {
+										"audio-file": "FinishedDing",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 608423495301385
 						}
 					],
 					"sid": 364936308798930
@@ -1845,6 +2138,15 @@
 								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
+									"sid": 309528182110381,
+									"parameters": {
+										"variable": "item_sunflower_down",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
 									"sid": 274087496940454,
 									"parameters": {
 										"variable": "sunfl_marked",
@@ -1891,9 +2193,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "SpriteFont",
-							"sid": 122721355217572,
+							"sid": 275407506359454,
 							"parameters": {
-								"text": "\"DIG PERFECT HOLE.\""
+								"text": "\"DIG A PER- FECT HOLE.\""
 							}
 						}
 					],
@@ -2088,6 +2390,33 @@
 						}
 					],
 					"sid": 673946623810818
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 629421119756152,
+							"parameters": {
+								"first-value": "Player_Currency",
+								"comparison": 2,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 139284201552206,
+							"parameters": {
+								"variable": "Player_Currency",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 203925458422232
 				}
 			],
 			"sid": 967414223564669
@@ -2103,57 +2432,42 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-start-of-layout",
+							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 231048423461619
+							"sid": 501882300122752,
+							"parameters": {
+								"interval-seconds": "random(3,10)"
+							}
 						}
 					],
 					"actions": [
 						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 833396244049626,
+							"parameters": {
+								"object-to-create": "par_coin_falling",
+								"layer": "\"game\"",
+								"x": "random(55,260)",
+								"y": "random(5, 90)",
+								"create-hierarchy": false
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 224587786913482,
+							"sid": 490097863931644,
 							"parameters": {
-								"seconds": "random(0,5)"
+								"seconds": "random(3,5)"
 							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "par_coin_falling",
+							"sid": 272035680352644
 						}
 					],
-					"sid": 957473636805824,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "every-tick",
-									"objectClass": "System",
-									"sid": 144385694448326
-								}
-							],
-							"actions": [
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 358133398992977,
-									"parameters": {
-										"seconds": "random(5,12)"
-									}
-								},
-								{
-									"id": "create-object",
-									"objectClass": "System",
-									"sid": 809666590398491,
-									"parameters": {
-										"object-to-create": "par_coin_falling",
-										"layer": "\"game\"",
-										"x": "random(55,260)",
-										"y": "random(5, 90)",
-										"create-hierarchy": false
-									}
-								}
-							],
-							"sid": 504296254534695
-						}
-					]
+					"sid": 653933344441303
 				},
 				{
 					"eventType": "block",
@@ -2200,6 +2514,189 @@
 				}
 			],
 			"sid": 168236214000995
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Back_Button",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 256560219575976,
+							"parameters": {
+								"object": "spr_back_button"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "spr_back_button",
+							"sid": 660761540546981,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 842561406407851
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 179623563712196,
+							"parameters": {
+								"object": "spr_back_button"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "spr_back_button",
+							"sid": 161660822875693,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 562997722346630
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "mouse-button-is-down",
+							"objectClass": "Mouse",
+							"sid": 801361963288537,
+							"parameters": {
+								"mouse-button": "left"
+							}
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 431393540313971,
+							"parameters": {
+								"object": "spr_back_button"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "spr_back_button",
+							"sid": 920242855304533,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 249010159430442
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-button-released",
+							"objectClass": "Mouse",
+							"sid": 718778213091584,
+							"parameters": {
+								"mouse-button": "left"
+							}
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 833475405617034,
+							"parameters": {
+								"object": "spr_back_button"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 299674268007655,
+							"parameters": {
+								"audio-file": "Click2",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 341196352091798,
+							"parameters": {
+								"seconds": "0.5"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "spr_fade",
+							"sid": 320514258394721,
+							"parameters": {
+								"x": "0",
+								"y": "0"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "spr_fade",
+							"sid": 842505363345508,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"fades\"",
+								"property": "offsetOpacity",
+								"end-value": "100",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 369867488339255,
+							"parameters": {
+								"seconds": "1.3"
+							}
+						},
+						{
+							"id": "set-paused",
+							"objectClass": "Audio",
+							"sid": 207703509428966,
+							"parameters": {
+								"tag": "\"game_music\"",
+								"state": "pause"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 960735601934436,
+							"parameters": {
+								"layout": "Menu"
+							}
+						}
+					],
+					"sid": 138002314541111
+				}
+			],
+			"sid": 398675680890330
 		}
 	],
 	"sid": 381076121808650

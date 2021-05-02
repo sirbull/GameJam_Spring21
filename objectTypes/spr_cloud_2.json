@@ -1,0 +1,63 @@
+{
+	"name": "spr_cloud_2",
+	"plugin-id": "Sprite",
+	"sid": 366869499260759,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 897258304869798
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 15,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5398221,
+						"collisionPoly": {
+							"points": [
+								0.09375,
+								0.2,
+								0.5,
+								0.4,
+								0.8125,
+								0.3333333333333333,
+								0.9375,
+								0.5,
+								0.84375,
+								0.6666666666666666,
+								0.5,
+								0.9333333333333333,
+								0.0625,
+								0.8,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 814202603920922,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

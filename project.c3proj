@@ -77,6 +77,14 @@
 			"author": "Scirra",
 			"version": "r241",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"version": "r241",
+			"bundled": false
 		}
 	],
 	"uniqueId": "knbzl4imixx",
@@ -108,11 +116,18 @@
 			"spr_dirt_wet",
 			"spr_small_icons",
 			"spr_coin",
-			"Sprite",
+			"spr_water_drip",
 			"spr_CurrencyCoin",
-			"Sprite2",
-			"Sprite3",
-			"par_coin_falling"
+			"spr_scarecrow",
+			"spr_enemy_bird",
+			"par_coin_falling",
+			"spr_Cursor",
+			"spr_back_button",
+			"spr_cloud_2",
+			"spr_Start_sign",
+			"spr_ant_hive",
+			"Sprite",
+			"Particles2"
 		],
 		"subfolders": []
 	},
@@ -182,6 +197,16 @@
 					"name": "CoinCollect.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 223100775559058
+				},
+				{
+					"name": "sfx_dig.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 462122429804196
+				},
+				{
+					"name": "sfx_soil.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 681107403074186
 				}
 			],
 			"subfolders": []

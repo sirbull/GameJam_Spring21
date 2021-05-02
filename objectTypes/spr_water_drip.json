@@ -1,7 +1,7 @@
 {
-	"name": "par_coin_falling",
+	"name": "spr_water_drip",
 	"plugin-id": "Sprite",
-	"sid": 230714851562588,
+	"sid": 840381777012944,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,157 +11,107 @@
 			{
 				"frames": [
 					{
-						"width": 8,
-						"height": 8,
+						"width": 16,
+						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4916314,
+						"imageSpriteId": 4201111,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 16,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3191133,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 16,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8013241,
 						"collisionPoly": {
 							"points": [
-								0,
-								0,
-								0.8808135986328125,
-								0,
+								0.4375,
+								0.21875,
 								0.875,
+								0.5,
 								0.875,
-								0,
-								0.875
+								0.53125,
+								0.3125,
+								0.5
 							]
 						},
 						"useCollisionPoly": true,
 						"duration": 1
 					},
 					{
-						"width": 8,
-						"height": 8,
+						"width": 16,
+						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4978096,
+						"imageSpriteId": 9927913,
 						"collisionPoly": {
 							"points": [
-								0,
-								0,
-								0.8808135986328125,
-								0,
-								0.875,
-								0.875,
-								0,
-								0.875
+								0.8125,
+								0.5,
+								0.3125,
+								0.65625,
+								0.8125,
+								0.5
 							]
 						},
 						"useCollisionPoly": true,
 						"duration": 1
 					},
 					{
-						"width": 8,
-						"height": 8,
+						"width": 16,
+						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 990681,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								0.8808135986328125,
-								0,
-								0.875,
-								0.875,
-								0,
-								0.875
-							]
-						},
+						"imageSpriteId": 7230110,
 						"useCollisionPoly": true,
 						"duration": 1
 					},
 					{
-						"width": 8,
-						"height": 8,
+						"width": 16,
+						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6412556,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								0.8808135986328125,
-								0,
-								0.875,
-								0.875,
-								0,
-								0.875
-							]
-						},
-						"useCollisionPoly": true,
-						"duration": 1
-					},
-					{
-						"width": 8,
-						"height": 8,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "png",
-						"exportQuality": 0.8,
-						"imageSpriteId": 4683013,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								0.8808135986328125,
-								0,
-								0.875,
-								0.875,
-								0,
-								0.875
-							]
-						},
-						"useCollisionPoly": true,
-						"duration": 1
-					},
-					{
-						"width": 8,
-						"height": 8,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "png",
-						"exportQuality": 0.8,
-						"imageSpriteId": 5449224,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								0.8808135986328125,
-								0,
-								0.875,
-								0.875,
-								0,
-								0.875
-							]
-						},
+						"imageSpriteId": 6457658,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 569479990260164,
-				"name": "Animation 1",
-				"isLooping": true,
+				"sid": 127443589900046,
+				"name": "ani_rain",
+				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 8
 			}
 		],
 		"subfolders": []
